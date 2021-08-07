@@ -22,10 +22,10 @@ private:
     QGridLayout *mpMainGrid=nullptr;
     QLabel *mpHomeName=nullptr;
     QLabel *mpVisitorName=nullptr;
+    QLabel *mpHomeTile=nullptr;
+    QLabel *mpVisitorTile=nullptr;
+
     QLCDNumber *mpHomeWins=nullptr;
     QLCDNumber *mpVisitorWins=nullptr;
-    QLCDNumber *mpHomeScore=nullptr;
-    QLCDNumber *mpVisitorScore=nullptr;
-
 };
 

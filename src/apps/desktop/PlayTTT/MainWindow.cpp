@@ -1,5 +1,8 @@
 #include "MainWindow.h"
 
+#include <QtGui/QBrush>
+#include <QtGui/QPainter>
+#include <QtGui/QPen>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 
@@ -12,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     , mpMainWidget(new QWidget(this))
     , mpMainLayout(new QGridLayout(mpMainWidget))
     , mpScoreWidget(new ScoreWidget(mpMainWidget))
-    , mpT3BoardWidget(new T3BoardWidget(mpMainWidget))
+    , mpT3BoardWidget(new T3BoardWidget(this))
     , mpBottomWidget(new BottomWidget(mpMainWidget))
 {
 }
@@ -21,10 +24,22 @@ MainWindow::~MainWindow()
 {
 }
 
+void MainWindow::displayMessage(const QString &aString)
+{
+    mpBottomWidget->display(aString);
+}
+
+void MainWindow::showAt(const int aIndex, const QString &aKey)
+{
+    const QIcon tIcon = factory()->icon(aKey);
+    mpT3BoardWidget->setIconAt(aIndex, tIcon);
+}
+
+
 void MainWindow::setup()
 {
     mpScoreWidget->setup();
-    mpT3BoardWidget->setup();
+    mpT3BoardWidget->setupLayout();
     mpBottomWidget->setup();
     mpMainLayout->setColumnMinimumWidth(0, 200);
     mpMainLayout->addWidget(mpScoreWidget, 0, 0);
@@ -37,5 +52,16 @@ void MainWindow::setup()
     mpMainWidget->setMinimumWidth(200);
     mpMainWidget->setLayout(mpMainLayout);
     setCentralWidget(mpMainWidget);
+}
+
+void MainWindow::setupIcons()
+{
+    const QSize tSize = mIconSize;
+    const QColor tHColor = Qt::red;
+    const QColor tVColor = Qt::blue;
+
+    factory()->create("Empty", IconFactory::Empty, QColor(), tSize);
+    factory()->create("Home", IconFactory::Ex, tHColor, tSize);
+    factory()->create("Visitor", IconFactory::Oh, tVColor, tSize);
 }
 

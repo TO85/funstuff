@@ -1,27 +1,40 @@
 #include "T3BoardWidget.h"
 
 #include <QtGui/QIcon>
+#include <QtGui/QPainter>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 
-#include "IconFactory.h"
-
-T3BoardWidget::T3BoardWidget(QWidget *parent)
+T3BoardWidget::T3BoardWidget(MainWindow *parent)
     : QWidget(parent)
+    , mpMainWindow(parent)
     , mpMainLayout(new QGridLayout(this))
 {
     setObjectName("T3BoardWidget");
 
 }
 
-void T3BoardWidget::setup()
+void T3BoardWidget::clearBoard()
+{
+    const int nGrid = mLabelVector.count();
+    for (int ix = 0; ix < nGrid; ++ix)
+        setIconAt(ix, mainWindow()->factory()->pixmap("C"));
+}
+
+void T3BoardWidget::setIconAt(const int aIndex, const QIcon aIcon)
+{
+    setIconInLayout(layoutRow(aIndex), layoutCol(aIndex), aIcon);
+}
+
+void T3BoardWidget::setupLayout()
 {
     const int nGrid = gridEntries();
-    QPixmap blankPixmap = IconFactory::solidPixmap(Qt::gray, mIconSize);
-    QPixmap vDividePixmap = IconFactory::solidPixmap(Qt::gray, QSize(3, mIconSize.height()));
-    QPixmap hDividePixmap = IconFactory::solidPixmap(Qt::gray, QSize(mIconSize.width(),3));
+    QPixmap blankPixmap(mIconSize); blankPixmap.fill(Qt::gray);
+    QPixmap vDividePixmap(QSize(3, mIconSize.height())); blankPixmap.fill(Qt::black);
+    QPixmap hDividePixmap(QSize(mIconSize.width(),3)); blankPixmap.fill(Qt::black);
     QLabel vDivideLabel(this); vDivideLabel.setPixmap(vDividePixmap);
     QLabel hDivideLabel(this); hDivideLabel.setPixmap(hDividePixmap);
+
     mLabelVector.resize(nGrid);
     for (int ix = 0; ix < nGrid; ++ix)
     {
@@ -36,6 +49,7 @@ void T3BoardWidget::setup()
     setLayout(mpMainLayout);
 }
 
+
 void T3BoardWidget::setIconAt(const int row, const int col, const QIcon aIcon)
 {
     setIconAt(index(row, col), aIcon);
@@ -46,18 +60,15 @@ void T3BoardWidget::setIconInLayout(const int aLayoutRow, const int aLayoutCol, 
     setPixmapAt(aLayoutRow, aLayoutCol, aIcon.pixmap(mIconSize));
 }
 
-void T3BoardWidget::setIconAt(const int aIndex, const QIcon aIcon)
-{
-    setIconInLayout(layoutRow(aIndex), layoutCol(aIndex), aIcon);
-}
 
 void T3BoardWidget::setPixmapAt(const int aIndex, const QPixmap aPixmap)
 {
-
+    mLabelVector[aIndex]->setPixmap(aPixmap);
 }
 
 void T3BoardWidget::setPixmapAt(const int aLayoutRow, const int aLayoutCol, const QPixmap aPixmap)
 {
+    setPixmapAt(indexFromLayout(aLayoutRow, aLayoutCol), aPixmap);
 }
 
 int T3BoardWidget::index(const int row, const int col) const

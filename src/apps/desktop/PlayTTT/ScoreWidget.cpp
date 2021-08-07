@@ -11,25 +11,22 @@ ScoreWidget::ScoreWidget(QWidget *parent)
     , mpMainGrid(new QGridLayout(this))
     , mpHomeName(new QLabel("Lancers", this))
     , mpVisitorName(new QLabel("Monsoons", this))
+    , mpHomeTile(new QLabel(this))
+    , mpVisitorTile(new QLabel(this))
     , mpHomeWins(new QLCDNumber(this))
     , mpVisitorWins(new QLCDNumber(this))
-    , mpHomeScore(new QLCDNumber(this))
-    , mpVisitorScore(new QLCDNumber(this))
 {
     setObjectName("ScoreWidget");
 }
 
 void ScoreWidget::setup()
 {
-    //QSizePolicy tSizePolicy = QSizePolicy::MinimumExpanding;
-    mpHomeScore->setDigitCount(2);
-    mpHomeScore->setMinimumSize(60, 60);
-    mpVisitorScore->setDigitCount(2);
-    mpVisitorScore->setMinimumSize(60, 60);
     mpHomeWins->setDigitCount(3);
     mpHomeWins->setMinimumSize(60, 30);
     mpVisitorWins->setDigitCount(3);
     mpVisitorWins->setMinimumSize(60, 30);
+    mpHomeTile=nullptr; // TODO
+    mpVisitorTile=nullptr;
 
     Qt::Alignment tAlignment = Qt::AlignHCenter | Qt::AlignVCenter;
     QLabel *pHomeLabel = new QLabel("Home", this);
@@ -49,11 +46,7 @@ void ScoreWidget::setup()
     mpMainGrid->addWidget(mpVisitorName,    1, 4, tAlignment);
     mpMainGrid->addWidget(mpHomeWins,       2, 0, tAlignment);
     mpMainGrid->addWidget(mpVisitorWins,    2, 4, tAlignment);
-    mpMainGrid->addWidget(mpHomeScore,      0, 1, 3, 1, tAlignment);
-    mpMainGrid->addWidget(mpVisitorScore,   0, 3, 3, 1, tAlignment);
 
     mpHomeWins->display(79);
     mpVisitorWins->display(19);
-    mpHomeScore->display(21);
-    mpVisitorScore->display(16);
 }

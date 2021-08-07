@@ -9,15 +9,21 @@
 
 class QGridLayout;
 
+#include "MainWindow.h"
+class IconFactory;
+
 class T3BoardWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit T3BoardWidget(QWidget *parent = nullptr);
+    explicit T3BoardWidget(MainWindow *parent = nullptr);
+    MainWindow * mainWindow() { return mpMainWindow; }
+    QSize iconSize() const { return mIconSize; }
 
 public slots:
-    void setup();
-    void setIconAt(const int row, const int col, const QIcon aIcon);
+    void clearBoard();
+    void setIconAt(const int aIndex, const QIcon aIcon);
+    void setupLayout();
 
 private:
     int index(const int row, const int col) const;
@@ -29,18 +35,15 @@ private:
     int layoutCol(const int aIndex) const;
 
 private:
-    void setIconAt(const int aIndex, const QIcon aIcon);
+    void setIconAt(const int row, const int col, const QIcon aIcon);
     void setIconInLayout(const int aLayoutRow, const int aLayoutCol, const QIcon aIcon);
     void setPixmapAt(const int aIndex, const QPixmap aPixmap);
     void setPixmapAt(const int aLayoutRow, const int aLayoutCol, const QPixmap aPixmap);
 
-private: // static
-    static QLabel blankPixmapLabel(const QSize aSize=QSize(64,64));
-
-
 signals:
 
 private:
+    MainWindow *mpMainWindow=nullptr;
     QGridLayout *mpMainLayout=nullptr;
     QVector<QLabel *> mLabelVector;
     QSize mGridSize=QSize(3, 3);

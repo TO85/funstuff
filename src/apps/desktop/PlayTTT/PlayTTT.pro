@@ -14,7 +14,6 @@ SOURCES += \
     PlayT3Application.cpp \
     ScoreWidget.cpp \
     T3BoardWidget.cpp \
-    T3Icons.cpp \
     main.cpp \
     MainWindow.cpp
 
@@ -24,8 +23,7 @@ HEADERS += \
     MainWindow.h \
     PlayT3Application.h \
     ScoreWidget.h \
-    T3BoardWidget.h \
-    T3Icons.h
+    T3BoardWidget.h
 
 FORMS +=
 
