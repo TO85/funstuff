@@ -3,6 +3,8 @@
 #include <QMainWindow>
 
 class QGridLayout;
+class QLayout;
+class QLabel;
 
 class ScoreWidget;
 class T3BoardWidget;
@@ -25,6 +27,7 @@ public slots:
     void setup();
     void displayMessage(const QString &aString);
     void showAt(const int aIndex, const QString &aKey);
+    void showAt(QLabel *pLabel, const QString &aKey);
 
 private slots:
     void setupIcons();

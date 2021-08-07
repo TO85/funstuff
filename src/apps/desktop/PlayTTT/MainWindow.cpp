@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , mpMainWidget(new QWidget(this))
     , mpMainLayout(new QGridLayout(mpMainWidget))
-    , mpScoreWidget(new ScoreWidget(mpMainWidget))
+    , mpScoreWidget(new ScoreWidget(this))
     , mpT3BoardWidget(new T3BoardWidget(this))
     , mpBottomWidget(new BottomWidget(mpMainWidget))
 {
@@ -35,12 +35,19 @@ void MainWindow::showAt(const int aIndex, const QString &aKey)
     mpT3BoardWidget->setIconAt(aIndex, tIcon);
 }
 
+void MainWindow::showAt(QLabel *pLabel, const QString &aKey)
+{
+    const QIcon tIcon = factory()->icon(aKey);
+    pLabel->setPixmap(tIcon.pixmap(mIconSize));
+}
+
 
 void MainWindow::setup()
 {
     mpScoreWidget->setup();
     mpT3BoardWidget->setupLayout();
     mpBottomWidget->setup();
+    setupIcons();
     mpMainLayout->setColumnMinimumWidth(0, 200);
     mpMainLayout->addWidget(mpScoreWidget, 0, 0);
     mpMainLayout->setRowMinimumHeight(0, 60);

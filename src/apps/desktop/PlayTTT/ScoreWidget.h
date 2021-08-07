@@ -6,11 +6,14 @@ class QGridLayout;
 class QLabel;
 class QLCDNumber;
 
+class MainWindow;
+
 class ScoreWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ScoreWidget(QWidget *parent = nullptr);
+    explicit ScoreWidget(MainWindow *parent = nullptr);
+    MainWindow * mainWindow() { return mpMainWindow; }
 
 public slots:
     void setup();
@@ -19,6 +22,7 @@ public slots:
 signals:
 
 private:
+    MainWindow *mpMainWindow=nullptr;
     QGridLayout *mpMainGrid=nullptr;
     QLabel *mpHomeName=nullptr;
     QLabel *mpVisitorName=nullptr;

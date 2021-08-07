@@ -26,8 +26,9 @@ void IconFactory::create(const QString &aKey, const Shape aShape, const QColor a
     const int tStrokeWidth = 5;
     const QSize tSize = aSize.isEmpty() ? mIconSize : aSize;
 
-    QPixmap tPixmap;
-    QPainter tPainter(&tPixmap);
+    QPixmap tPixmap(tSize);
+    QPainter tPainter;
+    tPainter.begin(&tPixmap);
     QBrush tBackBrush(mBackColor);
     tPainter.setBrush(tBackBrush);
     tPainter.drawRect(QRect(QPoint(0, 0), tSize));

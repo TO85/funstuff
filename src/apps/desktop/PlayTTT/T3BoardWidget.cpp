@@ -60,10 +60,15 @@ void T3BoardWidget::setIconInLayout(const int aLayoutRow, const int aLayoutCol, 
     setPixmapAt(aLayoutRow, aLayoutCol, aIcon.pixmap(mIconSize));
 }
 
+void T3BoardWidget::setPixmapAt(QLabel *pLabel, const QPixmap aPixmap)
+{
+    pLabel->setPixmap(aPixmap);
+}
+
 
 void T3BoardWidget::setPixmapAt(const int aIndex, const QPixmap aPixmap)
 {
-    mLabelVector[aIndex]->setPixmap(aPixmap);
+    setPixmapAt(mLabelVector[aIndex], aPixmap);
 }
 
 void T3BoardWidget::setPixmapAt(const int aLayoutRow, const int aLayoutCol, const QPixmap aPixmap)

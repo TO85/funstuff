@@ -5,9 +5,11 @@
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QSizePolicy>
 
+#include "MainWindow.h"
 
-ScoreWidget::ScoreWidget(QWidget *parent)
+ScoreWidget::ScoreWidget(MainWindow *parent)
     : QWidget(parent)
+    , mpMainWindow(parent)
     , mpMainGrid(new QGridLayout(this))
     , mpHomeName(new QLabel("Lancers", this))
     , mpVisitorName(new QLabel("Monsoons", this))
@@ -25,8 +27,6 @@ void ScoreWidget::setup()
     mpHomeWins->setMinimumSize(60, 30);
     mpVisitorWins->setDigitCount(3);
     mpVisitorWins->setMinimumSize(60, 30);
-    mpHomeTile=nullptr; // TODO
-    mpVisitorTile=nullptr;
 
     Qt::Alignment tAlignment = Qt::AlignHCenter | Qt::AlignVCenter;
     QLabel *pHomeLabel = new QLabel("Home", this);
@@ -46,7 +46,11 @@ void ScoreWidget::setup()
     mpMainGrid->addWidget(mpVisitorName,    1, 4, tAlignment);
     mpMainGrid->addWidget(mpHomeWins,       2, 0, tAlignment);
     mpMainGrid->addWidget(mpVisitorWins,    2, 4, tAlignment);
+    mpMainGrid->addWidget(mpHomeTile,       0, 1, 3, 1, tAlignment);
+    mpMainGrid->addWidget(mpVisitorTile,    0, 3, 3, 1, tAlignment);
 
+    mpHomeTile->setPixmap(mainWindow()->factory()->pixmap("Home"));
+    mpVisitorTile->setPixmap(mainWindow()->factory()->pixmap("Visitor"));
     mpHomeWins->display(79);
     mpVisitorWins->display(19);
 }
