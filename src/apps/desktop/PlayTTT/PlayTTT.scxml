@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="PlayTTT" qt:editorversion="4.15.2" initial="Construct">
+    <qt:editorinfo initialGeometry="682.10;65.45;-20;-20;40;40"/>
+    <final id="Final_1">
+        <qt:editorinfo scenegeometry="476.55;65.45;456.55;45.45;40;40" geometry="476.55;65.45;-20;-20;40;40"/>
+    </final>
+    <state id="Construct">
+        <qt:editorinfo scenegeometry="824.25;133.96;764.25;83.96;120;100" geometry="824.25;133.96;-60;-50;120;100"/>
+        <transition type="external" event="ConstructXSetup" target="Setup"/>
+    </state>
+    <state id="Setup">
+        <qt:editorinfo scenegeometry="824.25;265.89;764.25;215.89;120;100" geometry="824.25;265.89;-60;-50;120;100"/>
+        <transition type="external" event="SetupXStartPlay" target="StartPlay"/>
+    </state>
+    <state id="StartPlay">
+        <qt:editorinfo scenegeometry="824.25;397.81;764.25;347.81;120;100" geometry="824.25;397.81;-60;-50;120;100"/>
+        <transition type="external" event="StartPlayXGame" target="StartGame"/>
+    </state>
+    <state id="StartGame">
+        <qt:editorinfo scenegeometry="605.40;265.89;545.40;215.89;120;100" geometry="605.40;265.89;-60;-50;120;100"/>
+        <transition type="external" event="StartFameXPlay" target="NextPlay">
+            <qt:editorinfo endTargetFactors="49.25;72.04"/>
+        </transition>
+    </state>
+    <state id="NextPlay">
+        <qt:editorinfo scenegeometry="605.40;397.81;545.40;347.81;120;100" geometry="605.40;397.81;-60;-50;120;100"/>
+        <transition type="external" event="Cancel" target="Exit">
+            <qt:editorinfo movePoint="1.02;-29.66"/>
+        </transition>
+        <transition type="external" event="HomeNext" target="HomePlays">
+            <qt:editorinfo movePoint="10.23;14.32"/>
+        </transition>
+        <transition type="external" event="VisitorNext" target="VisitorPlays">
+            <qt:editorinfo movePoint="11.25;-1.02"/>
+        </transition>
+    </state>
+    <state id="HomePlays">
+        <qt:editorinfo scenegeometry="715.85;530.75;655.85;480.75;120;100" geometry="715.85;530.75;-60;-50;120;100"/>
+        <transition type="external" event="HomeXShowPlay" target="ShowPlay"/>
+    </state>
+    <state id="VisitorPlays">
+        <qt:editorinfo scenegeometry="507.23;530.75;447.23;480.75;120;100" geometry="507.23;530.75;-60;-50;120;100"/>
+        <transition type="external" event="VisitorXShowPlay" target="ShowPlay">
+            <qt:editorinfo movePoint="-14.32;14.32"/>
+        </transition>
+    </state>
+    <state id="ShowPlay">
+        <qt:editorinfo scenegeometry="605.40;683.12;545.40;633.12;120;100" geometry="605.40;683.12;-60;-50;120;100"/>
+        <transition type="external" event="PlayXWinner" target="IsWinner">
+            <qt:editorinfo movePoint="43.97;32.72"/>
+        </transition>
+    </state>
+    <state id="IsWinner">
+        <qt:editorinfo scenegeometry="336.45;530.75;276.45;480.75;120;100" geometry="336.45;530.75;-60;-50;120;100"/>
+        <transition type="external" event="Winner" target="UpdateScore">
+            <qt:editorinfo movePoint="49.09;25.57"/>
+        </transition>
+        <transition type="external" event="NotWinner" target="NextPlay">
+            <qt:editorinfo movePoint="-4.09;22.50"/>
+        </transition>
+    </state>
+    <state id="UpdateScore">
+        <qt:editorinfo scenegeometry="336.45;362.02;276.45;312.02;120;100" geometry="336.45;362.02;-60;-50;120;100"/>
+        <transition type="external" event="UpdateXGame" target="StartGame">
+            <qt:editorinfo movePoint="-20.45;21.47"/>
+        </transition>
+    </state>
+    <state id="Exit">
+        <qt:editorinfo scenegeometry="336.45;133.96;276.45;83.96;120;100" geometry="336.45;133.96;-60;-50;120;100"/>
+        <transition type="external" event="Quit" target="Final_1">
+            <qt:editorinfo movePoint="41.93;28.63"/>
+        </transition>
+    </state>
+</scxml>

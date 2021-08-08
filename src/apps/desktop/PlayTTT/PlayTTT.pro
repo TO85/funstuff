@@ -1,4 +1,4 @@
-QT       += core gui
+QT       *= core gui scxml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,7 +11,7 @@ CONFIG += c++11
 SOURCES += \
     BottomWidget.cpp \
     IconFactory.cpp \
-    PlayT3Application.cpp \
+    PlayTttApplication.cpp \
     ScoreWidget.cpp \
     T3BoardWidget.cpp \
     main.cpp \
@@ -21,7 +21,7 @@ HEADERS += \
     BottomWidget.h \
     IconFactory.h \
     MainWindow.h \
-    PlayT3Application.h \
+    PlayTttApplication.h \
     ScoreWidget.h \
     T3BoardWidget.h
 
@@ -31,3 +31,6 @@ FORMS +=
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+STATECHARTS += \
+ PlayTTT.scxml

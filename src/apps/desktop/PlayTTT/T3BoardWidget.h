@@ -37,6 +37,7 @@ private:
 private:
     void setIconAt(const int row, const int col, const QIcon aIcon);
     void setIconInLayout(const int aLayoutRow, const int aLayoutCol, const QIcon aIcon);
+    void setPixmapAt(QLabel *pLabel, const QPixmap aPixmap);
     void setPixmapAt(const int aIndex, const QPixmap aPixmap);
     void setPixmapAt(const int aLayoutRow, const int aLayoutCol, const QPixmap aPixmap);
 
