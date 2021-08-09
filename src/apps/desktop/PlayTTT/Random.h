@@ -1,22 +1,36 @@
 #pragma once
 
 #include <QtCore/QLinkedList>
+#include <QtCore/QVector>
 
 class Ramdom
 {
-    Random() { mGenerator = QRandomGenerator::securelySeeded(); }
-    Random(const quint32 aSeed) { mGenerator = QRandomGenerator(aSeed); }
+public:
+    Random() { mGenerator = QRandomGenerator::securelySeeded(); ctor(); }
+    Random(const quint32 aSeed) { mGenerator = QRandomGenerator(aSeed); ctor(); }
+    void ctor();
+    
+public:
+    unsigned peek() const;
+    unsigned peek(const qsizetype aWordCount) const;
+    
+public:
+    unsigned take();
+    unsigned take(const qsizetype aWordCount);
     
 private:
     void checkBuffer(const qsizetype mWordCount);
     // Adjust mBufferLowCount to mWordCount (and mBufferLoadCount)
     // Load more to mBuffer if necessary
+    QVector<unsigned> takeBuffer();
 
 private:
     QRandomGenerator mGenerator;
     unsigned mBits=0;
     unsigned mBitMask=0;
-    unsigned mBufferLowCount = 16;
-    unsigned mBufferFillCount = 64;
-    QLinkedList<unsigned> mBuffer;
+    unsigned mBufferChunkCount = 16;
+    unsigned mBufferLowCount = 64;
+    unsigned mBufferFillCount = 256;
+    QVector<unsigned> mCurrentChunk;
+    QLinkedList<QVector<unsigned>> mBuffer;
 }
