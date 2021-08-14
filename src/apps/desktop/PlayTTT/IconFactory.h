@@ -15,8 +15,8 @@ public:
     enum Shape
     {
         Empty = 0,
-        Ex,
-        Oh,
+        Cross,
+        Circle,
         $maximum
     };
 

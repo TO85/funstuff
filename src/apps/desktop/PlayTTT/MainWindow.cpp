@@ -68,7 +68,7 @@ void MainWindow::setupIcons()
     const QColor tVColor = Qt::blue;
 
     factory()->create("Empty", IconFactory::Empty, QColor(), tSize);
-    factory()->create("Home", IconFactory::Ex, tHColor, tSize);
-    factory()->create("Visitor", IconFactory::Oh, tVColor, tSize);
+    factory()->create("Home", IconFactory::Cross, tHColor, tSize);
+    factory()->create("Visitor", IconFactory::Circle, tVColor, tSize);
 }
 

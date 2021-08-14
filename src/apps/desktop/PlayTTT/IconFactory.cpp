@@ -2,7 +2,6 @@
 
 #include <QtGui/QPainter>
 
-
 QIcon IconFactory::icon(const QString &aKey)
 {
     return mKeyIconMap.value(aKey);
@@ -40,12 +39,12 @@ void IconFactory::create(const QString &aKey, const Shape aShape, const QColor a
         // nothing but background
         break;
 
-    case Ex:
+    case Cross:
         tPainter.drawLine(3, 3, tSize.width() - 3, tSize.height() - 3);
         tPainter.drawLine(tSize.width() - 3, 3, 3, tSize.height() - 3);
         break;
 
-    case Oh:
+    case Circle:
         tPainter.drawEllipse(3, 3, tSize.width() - 3, tSize.height() - 3);
         break;
 

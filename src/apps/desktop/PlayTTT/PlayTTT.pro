@@ -1,8 +1,8 @@
-QT       *= core gui scxml
+QT       *= core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -12,8 +12,12 @@ SOURCES += \
     BottomWidget.cpp \
     IconFactory.cpp \
     PlayTttApplication.cpp \
+    Random.cpp \
+    RandomF.cpp \
     ScoreWidget.cpp \
     T3BoardWidget.cpp \
+    T3Icons.cpp \
+    TttMachine.cpp \
     main.cpp \
     MainWindow.cpp
 
@@ -22,8 +26,12 @@ HEADERS += \
     IconFactory.h \
     MainWindow.h \
     PlayTttApplication.h \
+    Random.h \
+    RandomF.h \
     ScoreWidget.h \
-    T3BoardWidget.h
+    T3BoardWidget.h \
+    T3Icons.h \
+    TttMachine.h
 
 FORMS +=
 
