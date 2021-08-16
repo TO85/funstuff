@@ -11,7 +11,6 @@ void TttMachine::setup()
     qDebug(Q_FUNC_INFO);
     void(newState(Construct, "Construct"));
     void(newState(Setup, "Setup"));
-    void(newState(WaitSetup, "WaitSetup"));
     void(newState(StartPlay, "StartPlay"));
     void(newState(StartGame, "StartGame"));
     void(newState(NextPlay, "NextPlay"));
@@ -23,12 +22,11 @@ void TttMachine::setup()
     void(newState(Exit, "Exit"));
 
     void(newSignalTransition(Construct,     SIGNAL(signalConstruct()),          Setup));
-    void(newSignalTransition(Setup,         SIGNAL(signalSetup()),              WaitSetup));
-    void(newSignalTransition(WaitSetup,     SIGNAL(signalWaitSetup()),          StartPlay));
+    void(newSignalTransition(Setup,         SIGNAL(signalSetup()),              StartPlay));
     void(newSignalTransition(StartPlay,     SIGNAL(signalStartPlay()),          StartGame));
     void(newSignalTransition(StartGame,     SIGNAL(signalStartGame()),          NextPlay));
-    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayHome()),       HomePlays));
-    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayVisitor()),    VisitorPlays));
+//    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayHome()),       HomePlays));
+  //  void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayVisitor()),    VisitorPlays));
     void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayExit()),       Exit));
     void(newSignalTransition(HomePlays,     SIGNAL(signalHomePlays()),          ShowPlay));
     void(newSignalTransition(VisitorPlays,  SIGNAL(signalVisitorPlays()),       ShowPlay));

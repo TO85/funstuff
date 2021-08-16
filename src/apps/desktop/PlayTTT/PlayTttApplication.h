@@ -4,6 +4,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QWidget>
 
+#include "Random.h"
 class MainWindow;
 class TttMachine;
 
@@ -14,6 +15,11 @@ public:
     PlayTttApplication(int &argc, char **argv);
     MainWindow *mainWindow() { return mpMainWindow; }
     TttMachine *machine() { return mpMachine; }
+    Random random() { return mRandom; }
+
+public:
+    bool isHomeCurrent() { return mCurrentPlayer; }
+    bool isVistorCurrent() { return ! isHomeCurrent(); }
 
 public slots:
     void start(MainWindow *pMainWindow);
@@ -24,10 +30,9 @@ private slots:
     void setupConnections();
     void enterConstruct();
     void enterSetup();
-    void enterWaitSetup();
-    void enterStartPlay()       { qDebug("enterStartPlay()");       emit signalStartPlay(); }
-    void enterStartGame()       { qDebug("enterStartGame()");       emit signalStartGame(); }
-    void enterNextPlay()        { qDebug("enterNextPlay()"); }
+    void enterStartPlay();
+    void enterStartGame();
+    void enterNextPlay();
     void enterNextPlayHome()    { qDebug("enterNextPlayHome()");    emit signalNextPlayHome(); }
     void enterNextPlayVisitor() { qDebug("enterNextPlayVisitor()"); emit signalNextPlayVisitor(); }
     void enterNextPlayExit()    { qDebug("enterNextPlayExit()");    emit signalNextPlayExit(); }
@@ -36,13 +41,12 @@ private slots:
     void enterShowPlay()        { qDebug("enterShowPlay()");        emit signalShowPlay(); }
     void enterIsWinner()        { qDebug("enterIsWinner()");        emit signalIsWinner(); }
     void enterUpdateScore()     { qDebug("enterUpdateScore()");     emit signalUpdateScore(); }
-    void enterExit()            { qDebug("enterConstruct()");       emit signalExit(); }
+    void enterExit();
     void machineRunning(const bool running);
 
 signals:
     void signalConstruct();
     void signalSetup();
-    void signalWaitSetup();
     void signalStartPlay();
     void signalStartGame();
     void signalNextPlayHome();
@@ -58,5 +62,8 @@ signals:
 private:
     MainWindow *mpMainWindow=nullptr;
     TttMachine *mpMachine=nullptr;
+    Random mRandom;
     bool mSetupFinished=false;
+    bool mNextFirstPlayer=false;
+    bool mCurrentPlayer=false;
 };

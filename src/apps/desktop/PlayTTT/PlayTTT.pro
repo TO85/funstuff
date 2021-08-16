@@ -12,6 +12,7 @@ LIBS -= -lGL
 
 SOURCES += \
     BottomWidget.cpp \
+    NextPlayState.cpp \
     PlayTttApplication.cpp \
     Random.cpp \
     RandomF.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 HEADERS += \
     BottomWidget.h \
     MainWindow.h \
+    NextPlayState.h \
     PlayTttApplication.h \
     Random.h \
     RandomF.h \

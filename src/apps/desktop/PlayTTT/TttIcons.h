@@ -1,10 +1,12 @@
 #pragma once
 
 #include <QtDebug>
+#include <QtGlobal>
 #include <QtCore/QMetaType>
 #include <QtCore/QMap>
 #include <QtCore/QSize>
 #include <QtCore/QString>
+#include <QtGui/QColor>
 #include <QtGui/QIcon>
 #include <QtGui/QPixmap>
 
@@ -36,10 +38,17 @@ public:
 
 
 private:
+    QPixmap create(const QColor &aSolidColor, QSize aSize=QSize());
+
+    void addIcon(const QString &aKey, const QIcon &aIcon);
+
+    void setupBack(const QString &aKey);
     void setupEmpty(const QString &aKey);
 
 private:
-    QSize mIconSize=QSize(32, 32);
+    const QColor cmBackColor=QColor(Qt::lightGray);
+    const QColor cmEmptyColor=QColor(Qt::white);
+    QSize mIconSize=QSize(64, 64);
     QMap<QString, QIcon> mKeyIconMap;
 
 };

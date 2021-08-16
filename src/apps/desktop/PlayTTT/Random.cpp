@@ -11,6 +11,20 @@ Random::Word Random::peekWord()
     return mCurrentChunk.first();
 }
 
+Random::Word Random::takeWord()
+{
+    loadCurrent();
+    return mCurrentChunk.takeFirst();
+}
+
+bool Random::takeBit()
+{
+    if (0 == mBitMask)  mBits = takeWord(), mBitMask = 1;
+    bool result = 1 == (mBits | mBitMask);
+    mBitMask <<= 1;
+    return result;
+}
+
 /* ------------------------- private ------------------------- */
 
 Random::Count Random::loadCurrent()

@@ -33,7 +33,6 @@ void PlayTttApplication::setupConnections()
     qDebug(Q_FUNC_INFO);
     connect(machine()->state(TttMachine::Construct),       SIGNAL(entered()), this, SLOT(enterConstruct()));
     connect(machine()->state(TttMachine::Setup),           SIGNAL(entered()), this, SLOT(enterSetup()));
-    connect(machine()->state(TttMachine::WaitSetup),       SIGNAL(entered()), this, SLOT(enterWaitSetup()));
     connect(machine()->state(TttMachine::StartPlay),       SIGNAL(entered()), this, SLOT(enterStartPlay()));
     connect(machine()->state(TttMachine::StartGame),       SIGNAL(entered()), this, SLOT(enterStartGame()));
     connect(machine()->state(TttMachine::NextPlay),        SIGNAL(entered()), this, SLOT(enterNextPlay()));
@@ -60,13 +59,31 @@ void PlayTttApplication::enterSetup()
     emit signalSetup();
 }
 
-void PlayTttApplication::enterWaitSetup()
+void PlayTttApplication::enterStartPlay()
 {
     qDebug(Q_FUNC_INFO);
-    if ( ! mSetupFinished)
-        QTimer::singleShot(100, this, &PlayTttApplication::enterWaitSetup);
-    else
-        emit signalWaitSetup();
+    mNextFirstPlayer = random().takeBit();
+    emit signalStartPlay();
+}
+
+void PlayTttApplication::enterStartGame()
+{
+    qDebug(Q_FUNC_INFO);
+    mNextFirstPlayer ^= true;
+    mCurrentPlayer = mNextFirstPlayer;
+    emit signalStartGame();
+}
+
+void PlayTttApplication::enterNextPlay()
+{
+    qDebug(Q_FUNC_INFO);
+
+}
+
+void PlayTttApplication::enterExit()
+{
+    qDebug(Q_FUNC_INFO);
+    QTimer::singleShot(100, qApp, SLOT(quit()));
 }
 
 void PlayTttApplication::machineRunning(const bool running)

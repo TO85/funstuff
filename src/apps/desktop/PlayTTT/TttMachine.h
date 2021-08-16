@@ -21,7 +21,6 @@ public:
         $null           = 0,
         Construct       = 0x00000101,
         Setup           = 0x00000201,
-        WaitSetup       = 0x00000209,
         StartPlay       = 0x00000401,
         StartGame       = 0x00000801,
         NextPlay        = 0x00001001,
