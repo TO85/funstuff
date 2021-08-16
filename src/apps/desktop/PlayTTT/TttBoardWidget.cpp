@@ -1,4 +1,4 @@
-#include "T3BoardWidget.h"
+#include "TttBoardWidget.h"
 
 #include <QtGui/QIcon>
 #include <QtGui/QPainter>
@@ -17,8 +17,8 @@ T3BoardWidget::T3BoardWidget(MainWindow *parent)
 void T3BoardWidget::clearBoard()
 {
     const int nGrid = mLabelVector.count();
-    for (int ix = 0; ix < nGrid; ++ix)
-        setIconAt(ix, mainWindow()->factory()->pixmap("C"));
+//    for (int ix = 0; ix < nGrid; ++ix)
+  //      setIconAt(ix, mainWindow()->factory()->pixmap("C"));
 }
 
 void T3BoardWidget::setIconAt(const int aIndex, const QIcon aIcon)

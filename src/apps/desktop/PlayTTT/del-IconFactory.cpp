@@ -2,12 +2,12 @@
 
 #include <QtGui/QPainter>
 
-QIcon IconFactory::icon(const QString &aKey)
+QIcon IconFactory::icon(const QString &aKey) const
 {
     return mKeyIconMap.value(aKey);
 }
 
-QPixmap IconFactory::pixmap(const QString &aKey, const QSize aSize, QIcon::Mode mode, QIcon::State state)
+QPixmap IconFactory::pixmap(const QString &aKey, const QSize aSize, QIcon::Mode mode, QIcon::State state) const
 {
     return icon(aKey).pixmap(aSize.isEmpty() ? mIconSize : aSize, mode, state);
 }

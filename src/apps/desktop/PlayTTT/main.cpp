@@ -6,7 +6,8 @@ int main(int argc, char *argv[])
 {
     PlayTttApplication a(argc, argv);
     MainWindow w;
-    w.setup();
+    a.start(&w);
+//    w.setup();
     w.show();
     return a.exec();
 }

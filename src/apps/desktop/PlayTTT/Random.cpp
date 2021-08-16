@@ -2,7 +2,7 @@
 
 void Random::ctor()
 {
-    void(peekWord());
+    void peekWord();
 }
 
 Random::Word Random::peekWord()

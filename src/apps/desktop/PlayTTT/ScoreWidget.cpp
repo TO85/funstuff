@@ -49,8 +49,8 @@ void ScoreWidget::setup()
     mpMainGrid->addWidget(mpHomeTile,       0, 1, 3, 1, tAlignment);
     mpMainGrid->addWidget(mpVisitorTile,    0, 3, 3, 1, tAlignment);
 
-    mpHomeTile->setPixmap(mainWindow()->factory()->pixmap("Home"));
-    mpVisitorTile->setPixmap(mainWindow()->factory()->pixmap("Visitor"));
+//    mpHomeTile->setPixmap(mainWindow()->factory()->pixmap("Home"));
+  //  mpVisitorTile->setPixmap(mainWindow()->factory()->pixmap("Visitor"));
     mpHomeWins->display(79);
     mpVisitorWins->display(19);
 }

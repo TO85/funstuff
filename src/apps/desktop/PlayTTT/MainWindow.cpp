@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 
+#include <QtCore/QTimer>
 #include <QtGui/QBrush>
 #include <QtGui/QPainter>
 #include <QtGui/QPen>
@@ -7,47 +8,86 @@
 #include <QtWidgets/QLabel>
 
 #include "ScoreWidget.h"
-#include "T3BoardWidget.h"
+#include "TttBoardWidget.h"
 #include "BottomWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , mpMainWidget(new QWidget(this))
-    , mpMainLayout(new QGridLayout(mpMainWidget))
-    , mpScoreWidget(new ScoreWidget(this))
-    , mpT3BoardWidget(new T3BoardWidget(this))
-    , mpBottomWidget(new BottomWidget(mpMainWidget))
 {
+    qDebug(Q_FUNC_INFO);
+    setObjectName("MainWindow:PlayTttApplication");
 }
 
 MainWindow::~MainWindow()
 {
 }
 
+/* ------------------------- public slots ------------------------ */
+
+void MainWindow::construct()
+{
+    qDebug(Q_FUNC_INFO);
+    mpMainWidget = new  QWidget(this);
+    mpMainLayout = new  QGridLayout(mpMainWidget);
+    mpScoreWidget = new  ScoreWidget(this);
+    mpT3BoardWidget = new  T3BoardWidget(this);
+    mpBottomWidget = new  BottomWidget(mpMainWidget);
+    emit constructed();
+}
+
+void MainWindow::setup()
+{
+    qDebug(Q_FUNC_INFO);
+    QTimer::singleShot(100, this, &MainWindow::setupWidgets);
+}
+
 void MainWindow::displayMessage(const QString &aString)
 {
+    qDebug(Q_FUNC_INFO);
     mpBottomWidget->display(aString);
 }
 
 void MainWindow::showAt(const int aIndex, const QString &aKey)
 {
-    const QIcon tIcon = factory()->icon(aKey);
-    mpT3BoardWidget->setIconAt(aIndex, tIcon);
+    qDebug(Q_FUNC_INFO);
+//    const QIcon tIcon = factory()->icon(aKey);
+  //  mpT3BoardWidget->setIconAt(aIndex, tIcon);
 }
 
 void MainWindow::showAt(QLabel *pLabel, const QString &aKey)
 {
-    const QIcon tIcon = factory()->icon(aKey);
-    pLabel->setPixmap(tIcon.pixmap(mIconSize));
+    qDebug(Q_FUNC_INFO);
+//    const QIcon tIcon = factory()->icon(aKey);
+    //  pLabel->setPixmap(tIcon.pixmap(mIconSize));
 }
 
+/* ------------------------ private slots ------------------------ */
 
-void MainWindow::setup()
+void MainWindow::setupWidgets()
 {
+    qDebug(Q_FUNC_INFO);
     mpScoreWidget->setup();
     mpT3BoardWidget->setupLayout();
     mpBottomWidget->setup();
-    setupIcons();
+    QTimer::singleShot(100, this, &MainWindow::setupIcons);
+}
+
+void MainWindow::setupIcons()
+{
+    qDebug(Q_FUNC_INFO);
+    const QSize tSize = mIconSize;
+    const QColor tHColor = Qt::red;
+    const QColor tVColor = Qt::blue;
+
+//    factory()->create("Empty", IconFactory::Empty, QColor(), tSize);
+  //  factory()->create("Home", IconFactory::Cross, tHColor, tSize);
+    //factory()->create("Visitor", IconFactory::Circle, tVColor, tSize);
+    QTimer::singleShot(100, this, &MainWindow::setupLayout);
+}
+
+void MainWindow::setupLayout()
+{
+    qDebug(Q_FUNC_INFO);
     mpMainLayout->setColumnMinimumWidth(0, 200);
     mpMainLayout->addWidget(mpScoreWidget, 0, 0);
     mpMainLayout->setRowMinimumHeight(0, 60);
@@ -58,17 +98,13 @@ void MainWindow::setup()
     mpMainWidget->setMinimumHeight(360);
     mpMainWidget->setMinimumWidth(200);
     mpMainWidget->setLayout(mpMainLayout);
-    setCentralWidget(mpMainWidget);
+    QTimer::singleShot(100, this, &MainWindow::setupFinish);
 }
 
-void MainWindow::setupIcons()
+void MainWindow::setupFinish()
 {
-    const QSize tSize = mIconSize;
-    const QColor tHColor = Qt::red;
-    const QColor tVColor = Qt::blue;
-
-    factory()->create("Empty", IconFactory::Empty, QColor(), tSize);
-    factory()->create("Home", IconFactory::Cross, tHColor, tSize);
-    factory()->create("Visitor", IconFactory::Circle, tVColor, tSize);
+    qDebug(Q_FUNC_INFO);
+    setCentralWidget(mpMainWidget);
+    emit setupComplete();
 }
 

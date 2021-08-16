@@ -22,11 +22,11 @@ bool RandomF::loadBuffer()
 {
     bool result = bufferCount() < mBufferLowCount;
     if (result)
-        fillChunkBuffer();
+        fillBuffer();
     return result;
 }
 
-void RandomF::fillChunkBuffer(Count aCount)
+void RandomF::fillBuffer(Count aCount)
 {
     if (0 == aCount) aCount = mBufferFillCount;
     while (aCount > 0)

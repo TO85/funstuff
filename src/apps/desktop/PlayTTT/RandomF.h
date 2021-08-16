@@ -8,7 +8,6 @@
 class RandomF
 {
 public:
-    typedef quint32 Word; // QRandomGenerator::generate() result
     typedef double Real; // QRandomGenerator::generateDouble() result
     typedef qsizetype Count;
     typedef QQueue<Real> RealQueue;
@@ -28,13 +27,13 @@ public:
 
 private:
     bool loadBuffer();
-    void fillChunkBuffer(Count aCount=0);
+    void fillBuffer(Count aCount=0);
 
 
 private:
     QRandomGenerator mGenerator;
     RealQueue mBufferQueue;
-    Count mBufferLowCount = 4; // refill mChunkBuffer when below
-    Count mBufferFillCount = 16; // number of Chunks to refill at a time
+    Count mBufferLowCount = 4; // refill mBufferQueue when below
+    Count mBufferFillCount = 16; // number of Reals to refill at a time
 };
 

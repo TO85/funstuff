@@ -27,13 +27,18 @@ public:
     IconFactory &operator = (const IconFactory &other) = default;
 
 public:
-    QIcon icon(const QString &aKey);
+    QIcon icon(const QString &aKey) const;
+    QIcon icon(const QStringList &aKeys) const;
     QPixmap pixmap(const QString &aKey, const QSize aSize=QSize(),
-                   QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off);
+                   QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const;
     QPixmap solidPixmap(const QColor &aColor, const QSize aSize=QSize()) const;
 
 public:
     void create(const QString &aKey, const Shape aShape, const QColor aColor,
+                const QSize aSize=QSize(),
+                const QIcon::Mode mode = QIcon::Normal,
+                const QIcon::State state = QIcon::Off);
+    void create(const QString &aKey, const QColor aColor,
                 const QSize aSize=QSize(),
                 const QIcon::Mode mode = QIcon::Normal,
                 const QIcon::State state = QIcon::Off);
@@ -46,10 +51,13 @@ public:
                     const QIcon::Mode mode = QIcon::Normal, const QIcon::State state = QIcon::Off);
 
 private:
+    QPainter *startPainter(QPixmap aPixmap);
+
+private:
     QSize mIconSize;
     QColor mBackColor=Qt::gray;
+    QColor mEmptyColor=Qt::white;
     QMap<QString, QIcon> mKeyIconMap;
 };
-
 
 Q_DECLARE_METATYPE(IconFactory);

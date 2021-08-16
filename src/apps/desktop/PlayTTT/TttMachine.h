@@ -1,6 +1,7 @@
 #ifndef TTTMACHINE_H
 #define TTTMACHINE_H
 
+#include <QtDebug>
 #include <QtCore/QObject>
 #include <QtCore/QPair>
 #include <QtCore/QMap>
@@ -18,17 +19,18 @@ public:
     enum State
     {
         $null           = 0,
-        Construct       = 0x00000001,
-        Setup           = 0x00000002,
-        StartPlay       = 0x00000004,
-        StartGame       = 0x00000008,
-        NextPlay        = 0x00000010,
-        HomePlays       = 0x00000020,
-        VisitorPlays    = 0x00000040,
-        ShowPlay        = 0x00000080,
-        IsWinner        = 0x00000100,
-        UpdateScore     = 0x00000200,
-        Exit            = 0x00000400,
+        Construct       = 0x00000101,
+        Setup           = 0x00000201,
+        WaitSetup       = 0x00000209,
+        StartPlay       = 0x00000401,
+        StartGame       = 0x00000801,
+        NextPlay        = 0x00001001,
+        HomePlays       = 0x00002001,
+        VisitorPlays    = 0x00004001,
+        ShowPlay        = 0x00008001,
+        IsWinner        = 0x00010001,
+        UpdateScore     = 0x00020001,
+        Exit            = 0x00040001,
         $end
     };
     Q_DECLARE_FLAGS(StateFlags, State);
@@ -37,30 +39,20 @@ public:
 
 public:
     explicit TttMachine(QObject *parent = nullptr);
-    void ctor();
+    QState *state(const State &aStateEnum);
+
+public slots:
+    void setup();
+    virtual void start();
 
 signals:
-    void signalConstruct();
-    void signalSetup();
-    void signalStartPlay();
-    void signalStartGame();
-    void signalNextPlayHome();
-    void signalNextPlayVisitor();
-    void signalNextPlayExit();
-    void signalHomePlays();
-    void signalVisitorPlays();
-    void signalShowPlay();
-    void signalIsWinner();
-    void signalUpdateScore();
-    void signalExit();
 
 private:
     QState *newState(const State &aStateEnum, const QString &aName);
-    QSignalTransition *newSignalTransition(const SenderTarget aSenderTarget,
-                                           const char *pSignal);
-    QSignalTransition *newSignalTransition(const State aSender,
-                                           const char *pSignal,
-                                           const State aTarget);
+    QAbstractTransition *newSignalTransition(const State aSender, const char *pSignal, const State aTarget);
+
+private slots:
+
 
 private:
     QMap<State, QState *> mStateMap;
