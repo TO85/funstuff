@@ -7,8 +7,9 @@ class QGridLayout;
 class QLayout;
 class QLabel;
 
+#include "TttPixmaps.h"
 class ScoreWidget;
-class T3BoardWidget;
+class TttBoardWidget;
 class BottomWidget;
 
 class MainWindow : public QMainWindow
@@ -18,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    TttBoardWidget *board() { return mpTttBoardWidget; }
 
 public:
 
@@ -29,12 +31,10 @@ public slots:
     void construct();
     void setup();
     void displayMessage(const QString &aString);
-    void showAt(const int aIndex, const QString &aKey);
-    void showAt(QLabel *pLabel, const QString &aKey);
 
 private slots:
-    void setupWidgets();
     void setupIcons();
+    void setupWidgets();
     void setupLayout();
     void setupFinish();
 
@@ -42,7 +42,8 @@ private:
     QWidget *mpMainWidget=nullptr;
     QGridLayout *mpMainLayout=nullptr;
     ScoreWidget *mpScoreWidget=nullptr;
-    T3BoardWidget *mpT3BoardWidget=nullptr;
+    TttBoardWidget *mpTttBoardWidget=nullptr;
     BottomWidget *mpBottomWidget=nullptr;
+    const int cmShortShotMsec=10;
     QSize mIconSize=QSize(64, 64);
 };

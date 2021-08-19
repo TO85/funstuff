@@ -20,6 +20,7 @@ SOURCES += \
     TttBoardWidget.cpp \
     TttIcons.cpp \
     TttMachine.cpp \
+    TttPixmaps.cpp \
     main.cpp \
     MainWindow.cpp
 
@@ -32,8 +33,8 @@ HEADERS += \
     RandomF.h \
     ScoreWidget.h \
     TttBoardWidget.h \
-    TttIcons.h \
-    TttMachine.h
+    TttMachine.h \
+    TttPixmaps.h
 
 FORMS +=
 

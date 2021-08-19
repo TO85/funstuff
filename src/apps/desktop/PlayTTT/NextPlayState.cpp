@@ -48,7 +48,7 @@ void NextPlayState::onExit(QEvent *event)
 
 bool NextPlayState::handleKeyEvent(QKeyEvent *pKeyEvent)
 {
-    qDebug(Q_FUNC_INFO);
+    qDebug() << Q_FUNC_INFO;
     bool accept = false;
     if (pKeyEvent)
     {
@@ -67,5 +67,5 @@ bool NextPlayState::handleKeyEvent(QKeyEvent *pKeyEvent)
 
 void NextPlayState::timeout()
 {
-
+    // Needo: Computer Decides
 }

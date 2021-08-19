@@ -5,28 +5,34 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 
-T3BoardWidget::T3BoardWidget(MainWindow *parent)
+#include "MainWindow.h"
+
+TttBoardWidget::TttBoardWidget(MainWindow *parent)
     : QWidget(parent)
-    , mpMainWindow(parent)
     , mpMainLayout(new QGridLayout(this))
 {
     setObjectName("T3BoardWidget");
 
 }
 
-void T3BoardWidget::clearBoard()
+void TttBoardWidget::clearBoard()
 {
     const int nGrid = mLabelVector.count();
-//    for (int ix = 0; ix < nGrid; ++ix)
+//  NEEDO  for (int ix = 0; ix < nGrid; ++ix)
   //      setIconAt(ix, mainWindow()->factory()->pixmap("C"));
 }
 
-void T3BoardWidget::setIconAt(const int aIndex, const QIcon aIcon)
+void TttBoardWidget::setIconAt(const int aIndex, const QIcon aIcon)
 {
     setIconInLayout(layoutRow(aIndex), layoutCol(aIndex), aIcon);
 }
 
-void T3BoardWidget::setupLayout()
+void TttBoardWidget::setupPixmaps()
+{
+    mPixmaps.setup();
+}
+
+void TttBoardWidget::setupLayout()
 {
     const int nGrid = gridEntries();
     QPixmap blankPixmap(mIconSize); blankPixmap.fill(Qt::gray);
@@ -49,64 +55,77 @@ void T3BoardWidget::setupLayout()
     setLayout(mpMainLayout);
 }
 
+void TttBoardWidget::showAt(const int aIndex, const TttPixmaps::Keys &aKeyStack)
+{
+    qDebug() << Q_FUNC_INFO << aIndex << aKeyStack;
 
-void T3BoardWidget::setIconAt(const int row, const int col, const QIcon aIcon)
+}
+
+void TttBoardWidget::showAt(QLabel *pLabel, const int aPixmapKeyStack)
+{
+    qDebug() << Q_FUNC_INFO << pLabel->size() << aPixmapKeyStack;
+    pLabel->setPixmap(mPixmaps.pixmap(aPixmapKeyStack));
+}
+
+
+void TttBoardWidget::setIconAt(const int row, const int col, const QIcon aIcon)
 {
     setIconAt(index(row, col), aIcon);
 }
 
-void T3BoardWidget::setIconInLayout(const int aLayoutRow, const int aLayoutCol, const QIcon aIcon)
+void TttBoardWidget::setIconInLayout(const int aLayoutRow, const int aLayoutCol, const QIcon aIcon)
 {
     setPixmapAt(aLayoutRow, aLayoutCol, aIcon.pixmap(mIconSize));
 }
 
-void T3BoardWidget::setPixmapAt(QLabel *pLabel, const QPixmap aPixmap)
+void TttBoardWidget::setPixmapAt(QLabel *pLabel, const QPixmap aPixmap)
 {
     pLabel->setPixmap(aPixmap);
 }
 
 
-void T3BoardWidget::setPixmapAt(const int aIndex, const QPixmap aPixmap)
+void TttBoardWidget::setPixmapAt(const int aIndex, const QPixmap aPixmap)
 {
     setPixmapAt(mLabelVector[aIndex], aPixmap);
 }
 
-void T3BoardWidget::setPixmapAt(const int aLayoutRow, const int aLayoutCol, const QPixmap aPixmap)
+void TttBoardWidget::setPixmapAt(const int aLayoutRow, const int aLayoutCol, const QPixmap aPixmap)
 {
     setPixmapAt(indexFromLayout(aLayoutRow, aLayoutCol), aPixmap);
 }
 
-int T3BoardWidget::index(const int row, const int col) const
+int TttBoardWidget::index(const int row, const int col) const
 {
-    return row * mGridSize.width() + col;
+    return (mGridSize.height() - row - 1) * mGridSize.width() + col;
 }
 
-int T3BoardWidget::indexFromLayout(const int aLayoutRow, const int aLayoutCol) const
+int TttBoardWidget::indexFromLayout(const int aLayoutRow, const int aLayoutCol) const
 {
-    return index(aLayoutRow / 2, aLayoutCol / 2);
+    return index(mGridSize.height() - aLayoutRow / 2 - 1, aLayoutCol / 2);
 }
 
-int T3BoardWidget::gridEntries() const
+
+int TttBoardWidget::gridEntries() const
 {
     return mGridSize.width() * mGridSize.height();
 }
 
-int T3BoardWidget::row(const int aIndex) const
+int TttBoardWidget::row(const int aIndex) const
 {
     return aIndex / mGridSize.width();
 }
 
-int T3BoardWidget::col(const int aIndex) const
+int TttBoardWidget::col(const int aIndex) const
 {
     return aIndex % mGridSize.width();
 }
 
-int T3BoardWidget::layoutRow(const int aIndex) const
+int TttBoardWidget::layoutRow(const int aIndex) const
 {
-    return row(aIndex) * 2 + 1;
+    return mGridSize.height() - row(aIndex) - 1 * 2 + 1;
 }
 
-int T3BoardWidget::layoutCol(const int aIndex) const
+int TttBoardWidget::layoutCol(const int aIndex) const
 {
     return col(aIndex) * 2 + 1;
 }

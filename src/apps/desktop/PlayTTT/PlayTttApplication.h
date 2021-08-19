@@ -1,29 +1,41 @@
 #pragma once
 
 #include <QtDebug>
+#include <QtCore/QChar>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QWidget>
 
 #include "Random.h"
 class MainWindow;
 class TttMachine;
+class TttBoardWidget;
 
 class PlayTttApplication : public QApplication
 {
     Q_OBJECT
 public:
+    typedef QChar Token;
+    typedef QVector<Token> TokenVector;
+    typedef QVector<int> IndexVector;
+
+public:
     PlayTttApplication(int &argc, char **argv);
     MainWindow *mainWindow() { return mpMainWindow; }
     TttMachine *machine() { return mpMachine; }
+    TttBoardWidget *board();
     Random random() { return mRandom; }
 
 public:
-    bool isHomeCurrent() { return mCurrentPlayer; }
-    bool isVistorCurrent() { return ! isHomeCurrent(); }
+
+public:
+    bool isHomeCurrentPlayer() { return mCurrentPlayer; }
+    bool isVistorCurrentPlayer() { return ! isHomeCurrentPlayer(); }
+    IndexVector availableIndicies();
 
 public slots:
     void start(MainWindow *pMainWindow);
     void startMachine();
+    void startPlay();
     void windowFinished() { mSetupFinished = true; }
 
 private slots:
@@ -62,8 +74,14 @@ signals:
 private:
     MainWindow *mpMainWindow=nullptr;
     TttMachine *mpMachine=nullptr;
+    TttBoardWidget *mpBoardWidget=nullptr;
     Random mRandom;
-    bool mSetupFinished=false;
+    bool mSetupFinished=false;   // Needo: switch bool to Token
     bool mNextFirstPlayer=false;
     bool mCurrentPlayer=false;
+    const Token cmNullToken = Token('*');
+    const Token cmEmptyToken = Token(' ');
+    const Token cmCrossToken = Token('X');
+    const Token cmCircleToken = Token('O');
+    TokenVector mCurrentTokens;
 };

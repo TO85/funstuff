@@ -2,13 +2,13 @@
 
 TttMachine::TttMachine(QObject *parent) : QStateMachine(parent)
 {
-    qDebug(Q_FUNC_INFO);
+    qDebug() << Q_FUNC_INFO;
     setObjectName("TttMachine");
 }
 
 void TttMachine::setup()
 {
-    qDebug(Q_FUNC_INFO);
+    qDebug() << Q_FUNC_INFO;
     void(newState(Construct, "Construct"));
     void(newState(Setup, "Setup"));
     void(newState(StartPlay, "StartPlay"));
@@ -22,7 +22,7 @@ void TttMachine::setup()
     void(newState(Exit, "Exit"));
 
     void(newSignalTransition(Construct,     SIGNAL(signalConstruct()),          Setup));
-    void(newSignalTransition(Setup,         SIGNAL(signalSetup()),              StartPlay));
+//    void(newSignalTransition(Setup,         SIGNAL(signalSetup()),              StartPlay));
     void(newSignalTransition(StartPlay,     SIGNAL(signalStartPlay()),          StartGame));
     void(newSignalTransition(StartGame,     SIGNAL(signalStartGame()),          NextPlay));
 //    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayHome()),       HomePlays));
@@ -38,7 +38,7 @@ void TttMachine::setup()
 
 void TttMachine::start() // virtual
 {
-    qDebug(Q_FUNC_INFO);
+    qDebug() << Q_FUNC_INFO;
 //    qDebug() << state(Construct)->objectName();
   //  qDebug() << state(Construct)->property("StateName");
     setInitialState(state(Construct));

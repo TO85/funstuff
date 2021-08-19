@@ -6,6 +6,7 @@
 #include <QtWidgets/QSizePolicy>
 
 #include "MainWindow.h"
+#include "TttBoardWidget.h"
 
 ScoreWidget::ScoreWidget(MainWindow *parent)
     : QWidget(parent)
@@ -19,38 +20,46 @@ ScoreWidget::ScoreWidget(MainWindow *parent)
     , mpVisitorWins(new QLCDNumber(this))
 {
     setObjectName("ScoreWidget");
+    qDebug() << Q_FUNC_INFO << objectName();
+    mpMainGrid->setObjectName("MainGrid");
+    mpHomeName->setObjectName("HomeName");
+    mpVisitorName->setObjectName("VisitorName");
+    mpHomeTile->setObjectName("HomeTile");
+    mpVisitorTile->setObjectName("VisitorTile");
+    mpHomeWins->setObjectName("HomeWins");
+    mpVisitorWins->setObjectName("VisitorWins");
 }
 
 void ScoreWidget::setup()
 {
+    qDebug() << Q_FUNC_INFO << objectName();
     mpHomeWins->setDigitCount(3);
     mpHomeWins->setMinimumSize(60, 30);
     mpVisitorWins->setDigitCount(3);
     mpVisitorWins->setMinimumSize(60, 30);
+    mpHomeTile->setMinimumSize(QSize(48,48));
+    mpVisitorTile->setMinimumSize(QSize(48,48));
+    mpHomeTile->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    mpVisitorTile->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    mainWindow()->board()->showAt(mpHomeTile, TttPixmaps::EmptyBase | TttPixmaps::Cross);
+    mainWindow()->board()->showAt(mpVisitorTile, TttPixmaps::EmptyBase | TttPixmaps::Circle);
+    update();
 
     Qt::Alignment tAlignment = Qt::AlignHCenter | Qt::AlignVCenter;
-    QLabel *pHomeLabel = new QLabel("Home", this);
-    QLabel *pVisitorLabel = new QLabel("Visitor", this);
     mpMainGrid->setRowMinimumHeight(0, 15);
-    mpMainGrid->setRowMinimumHeight(1, 15);
+    mpMainGrid->setRowMinimumHeight(1, 60);
     mpMainGrid->setRowMinimumHeight(2, 30);
     mpMainGrid->setColumnMinimumWidth(0,  60);
     mpMainGrid->setColumnMinimumWidth(1,  60);
     mpMainGrid->setColumnMinimumWidth(2,  60);
-    mpMainGrid->setColumnMinimumWidth(3,  60);
-    mpMainGrid->setColumnMinimumWidth(4,  60);
     mpMainGrid->setSizeConstraint(QGridLayout::SetMinimumSize);
-    mpMainGrid->addWidget(pHomeLabel,       0, 0, tAlignment);
-    mpMainGrid->addWidget(pVisitorLabel,    0, 4, tAlignment);
-    mpMainGrid->addWidget(mpHomeName,       1, 0, tAlignment);
-    mpMainGrid->addWidget(mpVisitorName,    1, 4, tAlignment);
+    mpMainGrid->addWidget(mpHomeName,       0, 0, tAlignment);
+    mpMainGrid->addWidget(mpVisitorName,    0, 2, tAlignment);
+    mpMainGrid->addWidget(mpHomeTile,       1, 0, tAlignment);
+    mpMainGrid->addWidget(mpVisitorTile,    1, 2, tAlignment);
     mpMainGrid->addWidget(mpHomeWins,       2, 0, tAlignment);
-    mpMainGrid->addWidget(mpVisitorWins,    2, 4, tAlignment);
-    mpMainGrid->addWidget(mpHomeTile,       0, 1, 3, 1, tAlignment);
-    mpMainGrid->addWidget(mpVisitorTile,    0, 3, 3, 1, tAlignment);
+    mpMainGrid->addWidget(mpVisitorWins,    2, 2, tAlignment);
 
-//    mpHomeTile->setPixmap(mainWindow()->factory()->pixmap("Home"));
-  //  mpVisitorTile->setPixmap(mainWindow()->factory()->pixmap("Visitor"));
     mpHomeWins->display(79);
     mpVisitorWins->display(19);
 }
