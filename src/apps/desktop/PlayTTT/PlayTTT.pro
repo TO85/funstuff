@@ -18,7 +18,6 @@ SOURCES += \
     RandomF.cpp \
     ScoreWidget.cpp \
     TttBoardWidget.cpp \
-    TttIcons.cpp \
     TttMachine.cpp \
     TttPixmaps.cpp \
     main.cpp \

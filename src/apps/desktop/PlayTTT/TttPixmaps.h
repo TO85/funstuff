@@ -6,7 +6,7 @@
 #include <QtCore/QString>
 #include <QtGui/QPixmap>
 
-class TttPixmaps : public QMap<int, QPixmap>
+class TttPixmaps
 {
 public:
     enum Key
@@ -41,11 +41,15 @@ public:
     void setup();
 
 private:
+    void insert(const int aKey, const QPixmap &aPixmap);
     void setupBases();
     void setupShapes();
     void setupLines();
     QPixmap drawShape(const Key aKey);
     QPixmap drawLine(const Key aKey);
+
+private: // Debug
+    bool writeTempPixmap(const QString &aName, const int &aKeys, const QPixmap &aPixmap) const;
 
 private:
     const QSize cmBaseSize;
@@ -59,6 +63,7 @@ private:
     const int cmLineStrokeWidth=3;
     const int cmShapeMargin=5;
     const int cmLineMargin=3;
+    QMap<int, QPixmap> mKeysPixmapMap;
 };
 
 extern QPixmap operator + (const QPixmap &lhs, const QPixmap &rhs);

@@ -1,5 +1,6 @@
 #include "PlayTttApplication.h"
 
+#include <QtDebug>
 #include <QtCore/QTimer>
 
 #include "MainWindow.h"
@@ -21,6 +22,7 @@ TttBoardWidget *PlayTttApplication::board()
 
 PlayTttApplication::IndexVector PlayTttApplication::availableIndicies()
 {
+    qDebug() << Q_FUNC_INFO;
     Q_ASSERT(mCurrentTokens.count() == board()->gridEntries());
     IndexVector result(board()->gridEntries());
     for (int ix = 0; ix < board()->gridEntries(); ++ix)

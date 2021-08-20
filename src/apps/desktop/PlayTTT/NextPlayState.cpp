@@ -1,5 +1,6 @@
 #include "NextPlayState.h"
 
+#include <QtDebug>
 #include <QtCore/QEvent>
 #include <QtCore/QTimer>
 #include <QtGui/QKeyEvent>
@@ -11,17 +12,20 @@ NextPlayState::NextPlayState(PlayTttApplication *pApplication)
     , mpTimer(new QTimer)
 {
     setObjectName("NextPlayState");
+    qDebug() << Q_FUNC_INFO << pApplication->applicationFilePath() << objectName();
     connect(mpTimer, &QTimer::timeout, this, &NextPlayState::timeout);
     mpTimer->setSingleShot(true);
 }
 
 NextPlayState::~NextPlayState()
 {
+    qDebug() << Q_FUNC_INFO;
     if (mpTimer) mpTimer->deleteLater();
 }
 
 bool NextPlayState::event(QEvent *e)
 {
+    qDebug() << Q_FUNC_INFO << e->type();
     bool accept = false;
     if (false)
         ;
@@ -38,11 +42,13 @@ bool NextPlayState::event(QEvent *e)
 
 void NextPlayState::onEntry(QEvent *event)
 {
+    qDebug() << Q_FUNC_INFO;
     mpTimer->start(mTimeoutMsec);
 }
 
 void NextPlayState::onExit(QEvent *event)
 {
+    qDebug() << Q_FUNC_INFO;
     mpTimer->stop();
 }
 
@@ -67,5 +73,6 @@ bool NextPlayState::handleKeyEvent(QKeyEvent *pKeyEvent)
 
 void NextPlayState::timeout()
 {
+    qDebug() << Q_FUNC_INFO;
     // Needo: Computer Decides
 }
