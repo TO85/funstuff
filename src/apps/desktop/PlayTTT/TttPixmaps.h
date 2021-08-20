@@ -48,8 +48,8 @@ private:
     QPixmap drawShape(const Key aKey);
     QPixmap drawLine(const Key aKey);
 
-private: // Debug
-    bool writeTempPixmap(const QString &aName, const int &aKeys, const QPixmap &aPixmap) const;
+public: // Debug
+    static bool writeTempPixmap(const QString &aName, const int &aKeys, const QPixmap &aPixmap);
 
 private:
     const QSize cmBaseSize;

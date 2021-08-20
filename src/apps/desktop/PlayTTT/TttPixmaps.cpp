@@ -1,6 +1,7 @@
 #include "TttPixmaps.h"
 
 #include <QtDebug>
+#include <QtCore/QDateTime>
 #include <QtCore/QDir>
 #include <QtCore/QTemporaryFile>
 #include <QtGui/QPainter>
@@ -27,17 +28,15 @@ QPixmap TttPixmaps::pixmap(const int aKeyStack, const QSize aSize) const
     qDebug() << Q_FUNC_INFO << aKeyStack << aSize;
     QPixmap result(cmBaseSize);
     result.fill(Qt::magenta);
-    if (false)                          {;}
-    else if (BackBase   & aKeyStack)    result = result + pixmap(BackBase);
-    else if (EmptyBase  & aKeyStack)    result = result + pixmap(EmptyBase);
-    else if (ClearBase  & aKeyStack)    result = result + pixmap(ClearBase);
-    else if (Circle     & aKeyStack)    result = result + pixmap(Circle);
-    else if (Cross      & aKeyStack)    result = result + pixmap(Cross);
-    else if (LineNS     & aKeyStack)    result = result + pixmap(LineNS);
-    else if (LineEW     & aKeyStack)    result = result + pixmap(LineEW);
-    else if (LineNWSE   & aKeyStack)    result = result + pixmap(LineNWSE);
-    else if (LineNESW   & aKeyStack)    result = result + pixmap(LineNESW);
-    else                                {;}
+    if (BackBase   & aKeyStack)    result = result + pixmap(BackBase);
+    if (EmptyBase  & aKeyStack)    result = result + pixmap(EmptyBase);
+    if (ClearBase  & aKeyStack)    result = result + pixmap(ClearBase);
+    if (Circle     & aKeyStack)    result = result + pixmap(Circle);
+    if (Cross      & aKeyStack)    result = result + pixmap(Cross);
+    if (LineNS     & aKeyStack)    result = result + pixmap(LineNS);
+    if (LineEW     & aKeyStack)    result = result + pixmap(LineEW);
+    if (LineNWSE   & aKeyStack)    result = result + pixmap(LineNWSE);
+    if (LineNESW   & aKeyStack)    result = result + pixmap(LineNESW);
     if ( ! aSize.isEmpty()) result = result.scaled(aSize);
     writeTempPixmap("Stack", aKeyStack, result);
     return result;
@@ -151,14 +150,19 @@ QPixmap TttPixmaps::drawLine(const Key aKey)
     return result;
 }
 
-bool TttPixmaps::writeTempPixmap(const QString &aName, const int &aKeys, const QPixmap &aPixmap) const
+bool TttPixmaps::writeTempPixmap(const QString &aName, const int &aKeys, const QPixmap &aPixmap)
 {
 #ifdef QT_DEBUG
     static int tSeq = 0;
-    QDir tDir = QDir::current();
-    tDir.mkpath("./tmp");
-    tDir.cd("./tmp");
-    const QString tFileName = QString("%1+0x%2+%3.png").arg(aName)
+    static QDir tDir;
+    if (0 == tSeq)
+    {
+        tDir = QDir::current();
+        QString tDirName = "./tmp/" + QDateTime::currentDateTime().toString(Qt::ISODate);
+        tDir.mkpath(tDirName);
+        tDir.cd(tDirName);
+    }
+    const QString tFileName = QString("%3+0x%2+%1.png").arg(aName)
             .arg(aKeys, 6, 16, QLatin1Char('0')).arg(++tSeq, 3, 10, QLatin1Char('0'));
     QFileInfo tFI(tDir, tFileName);
     bool ok =  aPixmap.save(tFI.absoluteFilePath());
@@ -177,5 +181,8 @@ QPixmap operator + (const QPixmap &lhs, const QPixmap &rhs)
     tPainter.drawPixmap(lhs.rect(), rhs, rhs.rect());
     tPainter.end();
     qDebug() << Q_FUNC_INFO << lhs << rhs << result;
+    TttPixmaps::writeTempPixmap("op+lhs", 0, lhs);
+    TttPixmaps::writeTempPixmap("op+rhs", 0, rhs);
+    TttPixmaps::writeTempPixmap("op+res", 0, result);
     return result;
 }
