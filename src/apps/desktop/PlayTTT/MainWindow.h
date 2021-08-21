@@ -8,6 +8,7 @@ class QLayout;
 class QLabel;
 
 #include "TttPixmaps.h"
+class ActionManager;
 class ScoreWidget;
 class TttBoardWidget;
 class BottomWidget;
@@ -20,6 +21,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     TttBoardWidget *board() { return mpTttBoardWidget; }
+    ActionManager *actions() { return mpActions; }
 
 public:
 
@@ -40,6 +42,7 @@ private slots:
     void setupFinish();
 
 private:
+    ActionManager *mpActions=nullptr;
     QWidget *mpMainWidget=nullptr;
     QGridLayout *mpMainLayout=nullptr;
     ScoreWidget *mpScoreWidget=nullptr;

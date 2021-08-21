@@ -19,6 +19,8 @@ public:
     bool contains(const Key &aKey) const;
 
 public:
+    void addAction(QAction *pAction);
+    void addAction(const Key &aKey, QAction *pAction);
     QAction *addAction(const QString &aText) { return addAction(aText, aText); }
     QAction *addAction(const Key &aKey, const QString &aText);
     QAction *addAction(const Key &aKey, const QIcon &aIcon, const QString &aText);
@@ -32,6 +34,7 @@ signals:
 
 private:
     QMap<Key, QAction *> mKeyActionMap;
+    QMap<QAction *, Key> mActionKeyMap;
 
 };
 

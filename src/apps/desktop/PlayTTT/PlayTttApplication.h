@@ -6,7 +6,6 @@
 #include <QtWidgets/QWidget>
 
 #include "Random.h"
-class ActionManager;
 class MainWindow;
 class TttMachine;
 class TttBoardWidget;
@@ -24,7 +23,6 @@ public:
     MainWindow *mainWindow() { return mpMainWindow; }
     TttMachine *machine() { return mpMachine; }
     TttBoardWidget *board();
-    ActionManager *actions() { return mpActions; }
     Random random() { return mRandom; }
 
 public:
@@ -43,6 +41,7 @@ public slots:
     void windowFinished() { mSetupFinished = true; }
 
 private slots:
+//    void setupActions();
     void setupConnections();
     void enterConstruct();
     void enterSetup();
@@ -79,7 +78,6 @@ private:
     MainWindow *mpMainWindow=nullptr;
     TttMachine *mpMachine=nullptr;
     TttBoardWidget *mpBoardWidget=nullptr;
-    ActionManager *mpActions=nullptr;
     Random mRandom;
     bool mSetupFinished=false;   // Needo: switch bool to Token
     bool mNextFirstPlayer=false;

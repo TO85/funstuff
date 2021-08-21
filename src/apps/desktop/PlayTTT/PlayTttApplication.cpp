@@ -3,7 +3,6 @@
 #include <QtDebug>
 #include <QtCore/QTimer>
 
-#include "ActionManager.h"
 #include "MainWindow.h"
 #include "TttBoardWidget.h"
 #include "TttMachine.h"
@@ -11,7 +10,6 @@
 PlayTttApplication::PlayTttApplication(int &argc, char **argv)
     : QApplication(argc, argv)
     , mpMachine(new TttMachine(this))
-    , mpActions(new ActionManager(this))
 {
     qDebug() << Q_FUNC_INFO << arguments();
     setObjectName("PlayT3Application");
@@ -53,6 +51,16 @@ void PlayTttApplication::startPlay()
     qDebug() << Q_FUNC_INFO;
     // NEEDO: it
 }
+
+#if 0
+void PlayTttApplication::setupActions()
+{
+    qDebug() << Q_FUNC_INFO;
+    actions()->addAction("Quit");
+    actions()->addAction("StartPlay","Start Play");
+
+}
+#endif
 
 void PlayTttApplication::setupConnections()
 {

@@ -6,13 +6,16 @@
 #include <QtGui/QPen>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QToolBar>
 
+#include "ActionManager.h"
 #include "ScoreWidget.h"
 #include "TttBoardWidget.h"
 #include "BottomWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
+    , mpActions(new ActionManager(this))
 {
     qDebug() << Q_FUNC_INFO;
     setObjectName("MainWindow:PlayTttApplication");
@@ -85,7 +88,10 @@ void MainWindow::setupLayout()
 void MainWindow::setupToolbar()
 {
     qDebug() << Q_FUNC_INFO;
-    QToolBar * tToolBar = addToolBar("Main");
+    QToolBar * pToolBar = addToolBar("Main");
+    actions()->addAction("StartPlay", pToolBar->addAction("Start Play"));
+    pToolBar->addSeparator();
+    actions()->addAction(pToolBar->addAction("Quit"));
     QTimer::singleShot(cmShortShotMsec, this, &MainWindow::setupFinish);
 }
 

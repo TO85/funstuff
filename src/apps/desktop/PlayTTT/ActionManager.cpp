@@ -15,6 +15,20 @@ bool ActionManager::contains(const Key &aKey) const
     return mKeyActionMap.contains(aKey);
 }
 
+void ActionManager::addAction(QAction *pAction)
+{
+    qDebug() << Q_FUNC_INFO << pAction->text();
+    mKeyActionMap.insert(pAction->text(), pAction);
+    mActionKeyMap.insert(pAction, pAction->text());
+}
+
+void ActionManager::addAction(const Key &aKey, QAction *pAction)
+{
+    qDebug() << Q_FUNC_INFO << aKey;
+    mKeyActionMap.insert(aKey, pAction);
+    mActionKeyMap.insert(pAction, aKey);
+}
+
 QAction *ActionManager::action(const Key &aKey)
 {
     qDebug() << Q_FUNC_INFO << aKey;
