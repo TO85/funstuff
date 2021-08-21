@@ -61,8 +61,8 @@ private:
     const QColor cmLineColor=QColor(Qt::black);
     const int cmShapeStrokeWidth=5;
     const int cmLineStrokeWidth=3;
-    const int cmShapeMargin=5;
-    const int cmLineMargin=3;
+    const int cmShapeMargin=11;
+    const int cmLineMargin=5;
     QMap<int, QPixmap> mKeysPixmapMap;
 };
 

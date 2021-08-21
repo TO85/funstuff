@@ -11,8 +11,9 @@ void BottomWidget::setup()
 {
     setMinimumWidth(200);
     setMinimumHeight(40);
-    setAlignment(Qt::AlignVCenter | Qt::AlignLeft);
+    setAlignment(Qt::AlignBottom | Qt::AlignLeft);
     setText("Ready");
+
 }
 
 void BottomWidget::display(const QString &aString)

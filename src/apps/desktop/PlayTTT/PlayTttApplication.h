@@ -6,6 +6,7 @@
 #include <QtWidgets/QWidget>
 
 #include "Random.h"
+class ActionManager;
 class MainWindow;
 class TttMachine;
 class TttBoardWidget;
@@ -23,9 +24,12 @@ public:
     MainWindow *mainWindow() { return mpMainWindow; }
     TttMachine *machine() { return mpMachine; }
     TttBoardWidget *board();
+    ActionManager *actions() { return mpActions; }
     Random random() { return mRandom; }
 
 public:
+    Token crossToken() const { return cmCrossToken; }
+    Token circleToken() const { return cmCircleToken; }
 
 public:
     bool isHomeCurrentPlayer() { return mCurrentPlayer; }
@@ -75,6 +79,7 @@ private:
     MainWindow *mpMainWindow=nullptr;
     TttMachine *mpMachine=nullptr;
     TttBoardWidget *mpBoardWidget=nullptr;
+    ActionManager *mpActions=nullptr;
     Random mRandom;
     bool mSetupFinished=false;   // Needo: switch bool to Token
     bool mNextFirstPlayer=false;

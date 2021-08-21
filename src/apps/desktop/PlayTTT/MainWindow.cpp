@@ -79,6 +79,13 @@ void MainWindow::setupLayout()
     mpMainWidget->setMinimumHeight(360);
     mpMainWidget->setMinimumWidth(300);
     mpMainWidget->setLayout(mpMainLayout);
+    QTimer::singleShot(cmShortShotMsec, this, &MainWindow::setupToolbar);
+}
+
+void MainWindow::setupToolbar()
+{
+    qDebug() << Q_FUNC_INFO;
+    QToolBar * tToolBar = addToolBar("Main");
     QTimer::singleShot(cmShortShotMsec, this, &MainWindow::setupFinish);
 }
 

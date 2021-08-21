@@ -36,6 +36,7 @@ private slots:
     void setupIcons();
     void setupWidgets();
     void setupLayout();
+    void setupToolbar();
     void setupFinish();
 
 private:

@@ -95,8 +95,8 @@ QPixmap TttPixmaps::drawShape(const Key aKey)
     const QRect cBaseRect(QPoint(0, 0), cmBaseSize);
     const QRect cShapeRect(cBaseRect.left()   + cmShapeMargin,
                            cBaseRect.top()    + cmShapeMargin,
-                           cBaseRect.right()  - cmShapeMargin,
-                           cBaseRect.bottom() - cmShapeMargin);
+                           cBaseRect.width()  - 2 * cmShapeMargin,
+                           cBaseRect.height() - 2 * cmShapeMargin);
     QPen tPen;
     switch (aKey)
     {
@@ -138,12 +138,12 @@ QPixmap TttPixmaps::drawLine(const Key aKey)
     switch (aKey)
     {
     case LineNS:    tPainter.drawLine(QPoint(cLineRect.center().x(), cLineRect.top()),
-                                      QPoint(cLineRect.center().x(), cLineRect.bottom()));  break;
-    case LineEW:    tPainter.drawLine(QPoint(cLineRect.left(), cLineRect.center().y()),
-                                      QPoint(cLineRect.left(), cLineRect.center().y()));    break;
-    case LineNESW:  tPainter.drawLine(cLineRect.topLeft(), cLineRect.bottomRight());        break;
-    case LineNWSE:  tPainter.drawLine(cLineRect.topRight(), cLineRect.bottomLeft());        break;
-    default:        qWarning() << "Line key not handled2:" << aKey;                         break;
+                                      QPoint(cLineRect.center().x(), cLineRect.bottom()));      break;
+    case LineEW:    tPainter.drawLine(QPoint(cLineRect.left(),       cLineRect.center().y()),
+                                      QPoint(cLineRect.right(),      cLineRect.center().y()));  break;
+    case LineNESW:  tPainter.drawLine(cLineRect.topLeft(),           cLineRect.bottomRight());  break;
+    case LineNWSE:  tPainter.drawLine(cLineRect.topRight(),          cLineRect.bottomLeft());   break;
+    default:        qWarning() << "Line key not handled:" << aKey;                              break;
     }
     tPainter.end();
 

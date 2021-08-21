@@ -11,12 +11,14 @@ CONFIG += c++11
 LIBS -= -lGL
 
 SOURCES += \
+    ActionManager.cpp \
     BottomWidget.cpp \
     NextPlayState.cpp \
     PlayTttApplication.cpp \
     Random.cpp \
     RandomF.cpp \
     ScoreWidget.cpp \
+    StartPlayState.cpp \
     TttBoardWidget.cpp \
     TttMachine.cpp \
     TttPixmaps.cpp \
@@ -24,6 +26,7 @@ SOURCES += \
     MainWindow.cpp
 
 HEADERS += \
+    ActionManager.h \
     BottomWidget.h \
     MainWindow.h \
     NextPlayState.h \
@@ -31,6 +34,7 @@ HEADERS += \
     Random.h \
     RandomF.h \
     ScoreWidget.h \
+    StartPlayState.h \
     TttBoardWidget.h \
     TttMachine.h \
     TttPixmaps.h

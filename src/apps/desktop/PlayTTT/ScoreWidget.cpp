@@ -59,7 +59,25 @@ void ScoreWidget::setup()
     mpMainGrid->addWidget(mpVisitorTile,    1, 2, tAlignment);
     mpMainGrid->addWidget(mpHomeWins,       2, 0, tAlignment);
     mpMainGrid->addWidget(mpVisitorWins,    2, 2, tAlignment);
+    mpMainGrid->addWidget(mpCenterWidget,   0, 1, 3, 1, tAlignment);
 
     mpHomeWins->display(79);
     mpVisitorWins->display(19);
+}
+
+void ScoreWidget::clearCenterWidget()
+{
+    mpCenterWidget = nullptr;
+    emit centerWidgetChanged();
+}
+
+void ScoreWidget::setCenterWidget(QWidget *pWidget)
+{
+    mpCenterWidget = nullptr;
+    emit centerWidgetChanged();
+}
+
+QWidget *ScoreWidget::CenterWidget() const
+{
+    return mpCenterWidget;
 }
