@@ -41,7 +41,7 @@ void PlayTttApplication::start(MainWindow * pMainWindow)
 void PlayTttApplication::startMachine()
 {
     qDebug() << Q_FUNC_INFO;
-    machine()->setup();
+    machine()->setup(mainWindow());
     setupConnections();
     machine()->start();
 }

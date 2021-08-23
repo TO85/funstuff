@@ -1,12 +1,14 @@
 #include "TttMachine.h"
 
+#include "MainWindow.h"
+
 TttMachine::TttMachine(QObject *parent) : QStateMachine(parent)
 {
     qDebug() << Q_FUNC_INFO;
     setObjectName("TttMachine");
 }
 
-void TttMachine::setup()
+void TttMachine::setup(MainWindow *pMainWindow)
 {
     qDebug() << Q_FUNC_INFO;
     void(newState(Construct, "Construct"));
@@ -21,26 +23,26 @@ void TttMachine::setup()
     void(newState(UpdateScore, "UpdateScore"));
     void(newState(Exit, "Exit"));
 
-    void(newSignalTransition(Construct,     SIGNAL(signalConstruct()),          Setup));
-//    void(newSignalTransition(Setup,         SIGNAL(signalSetup()),              StartPlay));
-    void(newSignalTransition(StartPlay,     SIGNAL(signalStartPlay()),          StartGame));
-    void(newSignalTransition(StartGame,     SIGNAL(signalStartGame()),          NextPlay));
-//    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayHome()),       HomePlays));
-  //  void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayVisitor()),    VisitorPlays));
-    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayExit()),       Exit));
-    void(newSignalTransition(HomePlays,     SIGNAL(signalHomePlays()),          ShowPlay));
-    void(newSignalTransition(VisitorPlays,  SIGNAL(signalVisitorPlays()),       ShowPlay));
-    void(newSignalTransition(ShowPlay,      SIGNAL(signalShowPlay()),           IsWinner));
-    void(newSignalTransition(IsWinner,      SIGNAL(signalIsWinner()),           UpdateScore));
-    void(newSignalTransition(UpdateScore,   SIGNAL(signalUpdateScore()),        StartGame));
+    void(newTransition(Construct,       Setup));
+    void(newTransition(Setup,           StartPlay));
+    void(newTransition(StartGame,       NextPlay));
+    void(newTransition(HomePlays,       ShowPlay));
+    void(newTransition(VisitorPlays,    ShowPlay));
+    void(newTransition(ShowPlay,        IsWinner));
+    void(newTransition(IsWinner,        UpdateScore));
+    void(newTransition(UpdateScore,     StartGame));
 
+
+    void(newSignalTransition(pMainWindow, StartPlay, SLOT(readyStartPlay), StartGame));
+
+//    void(newSignalTransition(Setup,         SIGNAL(signalSetup()),              StartPlay));
+//    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayHome()),       HomePlays));
+//    void(newSignalTransition(NextPlay,      SIGNAL(signalNextPlayVisitor()),    VisitorPlays));
 }
 
 void TttMachine::start() // virtual
 {
     qDebug() << Q_FUNC_INFO;
-//    qDebug() << state(Construct)->objectName();
-  //  qDebug() << state(Construct)->property("StateName");
     setInitialState(state(Construct));
     QStateMachine::start();
 }
@@ -64,22 +66,26 @@ QState *TttMachine::newState(const State &aStateEnum, const QString &aName)
     return pState;
 }
 
-QAbstractTransition *TttMachine::newSignalTransition(const State aSender, const char *pSignal, const State aTarget)
+QAbstractTransition *TttMachine::newTransition(const State aSender, const State aTarget)
 {
     QAbstractTransition *result=nullptr;
     QState *pSender = mStateMap[aSender];
     QState *pTarget = mStateMap[aTarget];
-#if 1
-    Q_UNUSED(pSignal);  // TODO?
     result = pSender->addTransition(pTarget);
-#else
-    pSigXn = new QSignalTransition();
-    pSigXn->setSenderObject(pSender);
-    pSigXn->setTargetState(pTarget);
-    pSigXn->setSignal(pSignal);
-    mTransitionMap.insert(SenderTarget(aSender, aTarget), pSigXn);
-    connect(state(aSender), pSignal, state(aTarget), SLOT());
-#endif
+    return result;
+}
+
+QSignalTransition *TttMachine::newSignalTransition(QObject *pSender,
+                                                   const State aSource,
+                                                   const char *pSignal,
+                                                   const State aTarget)
+{
+    QSignalTransition *result=nullptr;
+    QState *pTarget = mStateMap[aTarget];
+    result = new QSignalTransition(pSender, pSignal);
+    result->setTargetState(pTarget);
+    mTransitionMap.insert(SenderTarget(aSource, aTarget), result);
+    connect(state(aSource), pSignal, state(aTarget), SLOT());
     return result;
 }
 

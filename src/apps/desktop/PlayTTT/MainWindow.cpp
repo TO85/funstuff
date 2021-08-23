@@ -10,6 +10,7 @@
 
 #include "ActionManager.h"
 #include "ScoreWidget.h"
+#include "PlayTttApplication.h"
 #include "TttBoardWidget.h"
 #include "BottomWidget.h"
 
@@ -50,6 +51,12 @@ void MainWindow::displayMessage(const QString &aString)
     mpBottomWidget->display(aString);
 }
 
+void MainWindow::actionStartPlay()
+{
+    emit readyStartPlay();
+}
+
+
 /* ------------------------ private slots ------------------------ */
 
 void MainWindow::setupIcons()
@@ -82,16 +89,17 @@ void MainWindow::setupLayout()
     mpMainWidget->setMinimumHeight(360);
     mpMainWidget->setMinimumWidth(300);
     mpMainWidget->setLayout(mpMainLayout);
-    QTimer::singleShot(cmShortShotMsec, this, &MainWindow::setupToolbar);
+    QTimer::singleShot(cmShortShotMsec, this, &MainWindow::setupToolBar);
 }
 
-void MainWindow::setupToolbar()
+void MainWindow::setupToolBar()
 {
     qDebug() << Q_FUNC_INFO;
     QToolBar * pToolBar = addToolBar("Main");
-    actions()->addAction("StartPlay", pToolBar->addAction("Start Play"));
+    actions()->addAction("StartPlay", pToolBar->addAction("Start Play", this, SLOT(readyStartPlay)));
+    actions()->setInvisible("StartPlay");
     pToolBar->addSeparator();
-    actions()->addAction(pToolBar->addAction("Quit"));
+    actions()->addAction(pToolBar->addAction("Quit", &PlayTttApplication::quit));
     QTimer::singleShot(cmShortShotMsec, this, &MainWindow::setupFinish);
 }
 

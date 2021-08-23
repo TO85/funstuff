@@ -3,6 +3,7 @@
 
 #include <QtDebug>
 #include <QtCore/QObject>
+#include <QtCore/QFlags>
 #include <QtCore/QPair>
 #include <QtCore/QMap>
 #include <QtCore/QState>
@@ -10,7 +11,7 @@
 #include <QtCore/QString>
 #include <QtCore/QSignalTransition>
 
-#include <QtCore/QFlags>
+class MainWindow;
 
 class TttMachine : public QStateMachine
 {
@@ -41,14 +42,15 @@ public:
     QState *state(const State &aStateEnum);
 
 public slots:
-    void setup();
+    void setup(MainWindow *pMainWindow);
     virtual void start();
 
 signals:
 
 private:
     QState *newState(const State &aStateEnum, const QString &aName);
-    QAbstractTransition *newSignalTransition(const State aSender, const char *pSignal, const State aTarget);
+    QAbstractTransition *newTransition(const State aSender, const State aTarget);
+    QSignalTransition *newSignalTransition(QObject *pSender, const State aSource, const char *pSignal, const State aTarget);
 
 private slots:
 

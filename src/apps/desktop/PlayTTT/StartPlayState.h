@@ -7,21 +7,26 @@ class QPushButton;
 class QVBoxLayout;
 class QWidget;
 
-class PlayTttApplication;
+class MainWindow;
 
 class StartPlayState : public QState
 {
     Q_OBJECT
 public:
-    StartPlayState(PlayTttApplication * pApplication);
+    StartPlayState(MainWindow *pMainWindow);
     ~StartPlayState() {;}
-    PlayTttApplication *application() { return mpApplication; }
+    MainWindow *mainWindow() { return mpMainWindow; }
 
 public slots:
     void setup();
 
+//    virtual bool event(QEvent *e) override;
+    virtual void onEntry(QEvent *event) override;
+    virtual void onExit(QEvent *event) override;
+
+
 private:
-    PlayTttApplication *mpApplication=nullptr;
+    MainWindow *mpMainWindow=nullptr;
     QWidget *mpMainWidget=nullptr;
 };
 

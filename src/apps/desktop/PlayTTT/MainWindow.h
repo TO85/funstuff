@@ -28,17 +28,19 @@ public:
 signals:
     void constructed();
     void setupComplete();
+    void readyStartPlay();
 
 public slots:
     void construct();
     void setup();
     void displayMessage(const QString &aString);
+    void actionStartPlay();
 
 private slots:
     void setupIcons();
     void setupWidgets();
     void setupLayout();
-    void setupToolbar();
+    void setupToolBar();
     void setupFinish();
 
 private:
