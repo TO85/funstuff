@@ -1,0 +1,281 @@
+\hypertarget{class_action_manager}{}\doxysection{Action\+Manager Class Reference}
+\label{class_action_manager}\index{ActionManager@{ActionManager}}
+
+
+{\ttfamily \#include $<$Action\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Action\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{class_action_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Action\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{class_action_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Q\+String \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_action_manager_a9cdf3d6d70c93a7c18f81d0b860b7c28}{action\+Added}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key, Q\+Action $\ast$p\+Action)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_action_manager_ae0d944e0790cdcc27bf691c8e52d8f47}{Action\+Manager}} (Q\+Object $\ast$parent=nullptr)
+\item 
+bool \mbox{\hyperlink{class_action_manager_a53df251a38a6a2700ad8c9e6263c2cc2}{contains}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key) const
+\item 
+void \mbox{\hyperlink{class_action_manager_ae06987541fe14cfe737750b5428415ee}{add\+Action}} (Q\+Action $\ast$p\+Action)
+\item 
+void \mbox{\hyperlink{class_action_manager_a630d2d1bcc4a30a8d195e92020e82d5a}{add\+Action}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key, Q\+Action $\ast$p\+Action)
+\item 
+Q\+Action $\ast$ \mbox{\hyperlink{class_action_manager_a26bcbb64d8d57b11a0744a3bc5f2ac41}{add\+Action}} (const Q\+String \&a\+Text)
+\item 
+Q\+Action $\ast$ \mbox{\hyperlink{class_action_manager_a16b9759873a60067a3123b443945c1f3}{add\+Action}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key, const Q\+String \&a\+Text)
+\item 
+Q\+Action $\ast$ \mbox{\hyperlink{class_action_manager_a06c723b89d7ae02a883fa9671ffb3ee1}{add\+Action}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key, const Q\+Icon \&a\+Icon, const Q\+String \&a\+Text)
+\item 
+Q\+Action $\ast$ \mbox{\hyperlink{class_action_manager_ab322f8e4518e3949b7e58cfedd59ca5c}{action}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key)
+\item 
+Q\+Action $\ast$ \mbox{\hyperlink{class_action_manager_a64ebca3e192ca3c52a67c3a7aac8c8f7}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key)
+\item 
+void \mbox{\hyperlink{class_action_manager_acd20553884ddd27bfd0515355ef26592}{set\+Visible}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key, const bool \&a\+Visible=true)
+\item 
+void \mbox{\hyperlink{class_action_manager_ad25039e9bf36ad9793de3119e3aa3583}{set\+Invisible}} (const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&a\+Key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Action\+Manager.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}\label{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}} 
+\index{ActionManager@{ActionManager}!Key@{Key}}
+\index{Key@{Key}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily typedef Q\+String \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Action\+Manager\+::\+Key}}}
+
+
+
+Definition at line 13 of file Action\+Manager.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_action_manager_ae0d944e0790cdcc27bf691c8e52d8f47}\label{class_action_manager_ae0d944e0790cdcc27bf691c8e52d8f47}} 
+\index{ActionManager@{ActionManager}!ActionManager@{ActionManager}}
+\index{ActionManager@{ActionManager}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{ActionManager()}{ActionManager()}}
+{\footnotesize\ttfamily Action\+Manager\+::\+Action\+Manager (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 6 of file Action\+Manager.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_action_manager_ab322f8e4518e3949b7e58cfedd59ca5c}\label{class_action_manager_ab322f8e4518e3949b7e58cfedd59ca5c}} 
+\index{ActionManager@{ActionManager}!action@{action}}
+\index{action@{action}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}}
+{\footnotesize\ttfamily Q\+Action $\ast$ Action\+Manager\+::action (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Action\+Manager.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_ab322f8e4518e3949b7e58cfedd59ca5c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_ab322f8e4518e3949b7e58cfedd59ca5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_action_manager_a9cdf3d6d70c93a7c18f81d0b860b7c28}\label{class_action_manager_a9cdf3d6d70c93a7c18f81d0b860b7c28}} 
+\index{ActionManager@{ActionManager}!actionAdded@{actionAdded}}
+\index{actionAdded@{actionAdded}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{actionAdded}{actionAdded}}
+{\footnotesize\ttfamily void Action\+Manager\+::action\+Added (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key,  }\item[{Q\+Action $\ast$}]{p\+Action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_action_manager_a06c723b89d7ae02a883fa9671ffb3ee1}\label{class_action_manager_a06c723b89d7ae02a883fa9671ffb3ee1}} 
+\index{ActionManager@{ActionManager}!addAction@{addAction}}
+\index{addAction@{addAction}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Q\+Action$\ast$ Action\+Manager\+::add\+Action (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key,  }\item[{const Q\+Icon \&}]{a\+Icon,  }\item[{const Q\+String \&}]{a\+Text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_action_manager_a16b9759873a60067a3123b443945c1f3}\label{class_action_manager_a16b9759873a60067a3123b443945c1f3}} 
+\index{ActionManager@{ActionManager}!addAction@{addAction}}
+\index{addAction@{addAction}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Q\+Action$\ast$ Action\+Manager\+::add\+Action (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key,  }\item[{const Q\+String \&}]{a\+Text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_action_manager_a630d2d1bcc4a30a8d195e92020e82d5a}\label{class_action_manager_a630d2d1bcc4a30a8d195e92020e82d5a}} 
+\index{ActionManager@{ActionManager}!addAction@{addAction}}
+\index{addAction@{addAction}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Action\+Manager\+::add\+Action (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key,  }\item[{Q\+Action $\ast$}]{p\+Action }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Action\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_action_manager_a26bcbb64d8d57b11a0744a3bc5f2ac41}\label{class_action_manager_a26bcbb64d8d57b11a0744a3bc5f2ac41}} 
+\index{ActionManager@{ActionManager}!addAction@{addAction}}
+\index{addAction@{addAction}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Q\+Action$\ast$ Action\+Manager\+::add\+Action (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 24 of file Action\+Manager.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{class_action_manager_a26bcbb64d8d57b11a0744a3bc5f2ac41_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{class_action_manager_a26bcbb64d8d57b11a0744a3bc5f2ac41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_action_manager_ae06987541fe14cfe737750b5428415ee}\label{class_action_manager_ae06987541fe14cfe737750b5428415ee}} 
+\index{ActionManager@{ActionManager}!addAction@{addAction}}
+\index{addAction@{addAction}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Action\+Manager\+::add\+Action (\begin{DoxyParamCaption}\item[{Q\+Action $\ast$}]{p\+Action }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Action\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_action_manager_a53df251a38a6a2700ad8c9e6263c2cc2}\label{class_action_manager_a53df251a38a6a2700ad8c9e6263c2cc2}} 
+\index{ActionManager@{ActionManager}!contains@{contains}}
+\index{contains@{contains}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool Action\+Manager\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 13 of file Action\+Manager.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_a53df251a38a6a2700ad8c9e6263c2cc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_action_manager_a64ebca3e192ca3c52a67c3a7aac8c8f7}\label{class_action_manager_a64ebca3e192ca3c52a67c3a7aac8c8f7}} 
+\index{ActionManager@{ActionManager}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily Q\+Action$\ast$ Action\+Manager\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 28 of file Action\+Manager.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_a64ebca3e192ca3c52a67c3a7aac8c8f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_action_manager_ad25039e9bf36ad9793de3119e3aa3583}\label{class_action_manager_ad25039e9bf36ad9793de3119e3aa3583}} 
+\index{ActionManager@{ActionManager}!setInvisible@{setInvisible}}
+\index{setInvisible@{setInvisible}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{setInvisible()}{setInvisible()}}
+{\footnotesize\ttfamily void Action\+Manager\+::set\+Invisible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file Action\+Manager.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_ad25039e9bf36ad9793de3119e3aa3583_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_ad25039e9bf36ad9793de3119e3aa3583_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_action_manager_acd20553884ddd27bfd0515355ef26592}\label{class_action_manager_acd20553884ddd27bfd0515355ef26592}} 
+\index{ActionManager@{ActionManager}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!ActionManager@{ActionManager}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily void Action\+Manager\+::set\+Visible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_action_manager_a4ee39283ff22aee6f847b50217f044e2}{Key}} \&}]{a\+Key,  }\item[{const bool \&}]{a\+Visible = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Action\+Manager.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_acd20553884ddd27bfd0515355ef26592_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_action_manager_acd20553884ddd27bfd0515355ef26592_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_action_manager_8h}{Action\+Manager.\+h}}\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_action_manager_8cpp}{Action\+Manager.\+cpp}}\end{DoxyCompactItemize}

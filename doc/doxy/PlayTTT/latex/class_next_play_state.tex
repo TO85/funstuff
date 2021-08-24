@@ -1,0 +1,162 @@
+\hypertarget{class_next_play_state}{}\doxysection{Next\+Play\+State Class Reference}
+\label{class_next_play_state}\index{NextPlayState@{NextPlayState}}
+
+
+{\ttfamily \#include $<$Next\+Play\+State.\+h$>$}
+
+
+
+Inheritance diagram for Next\+Play\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_next_play_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Next\+Play\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_next_play_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_next_play_state_a2a062d51b8d67db08c232ac385d5584c}{home\+Plays}} (const Q\+Char \&a\+Char)
+\item 
+void \mbox{\hyperlink{class_next_play_state_a186e4eadf1f08174cc6d24851e709e66}{visitor\+Plays}} (const Q\+Char \&a\+Char)
+\item 
+void \mbox{\hyperlink{class_next_play_state_a2364d676a67658209f5864f2b812d41a}{exit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_next_play_state_ae82795ac9d6e1f783626404d9a878cb3}{Next\+Play\+State}} (\mbox{\hyperlink{class_play_ttt_application}{Play\+Ttt\+Application}} $\ast$p\+Application)
+\item 
+\mbox{\hyperlink{class_next_play_state_ab1e32d4b612a72a214aa4a5c19d805d3}{$\sim$\+Next\+Play\+State}} ()
+\item 
+\mbox{\hyperlink{class_play_ttt_application}{Play\+Ttt\+Application}} $\ast$ \mbox{\hyperlink{class_next_play_state_a771e5e810281af4ae54c05214d6f46c3}{application}} ()
+\item 
+void \mbox{\hyperlink{class_next_play_state_a50fc09210fbfd57c3e599b9d41054f59}{set\+Timout\+Msec}} (const quint64 a\+Msec)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_next_play_state_a7783af1735f1520169583dd192fe55e5}{event}} (Q\+Event $\ast$e) override
+\item 
+virtual void \mbox{\hyperlink{class_next_play_state_a7d52d13e1e42a6a6d4bd6c24a4b79df8}{on\+Entry}} (Q\+Event $\ast$\mbox{\hyperlink{class_next_play_state_a7783af1735f1520169583dd192fe55e5}{event}}) override
+\item 
+virtual void \mbox{\hyperlink{class_next_play_state_ad68c72a04e950f9bac1ab4cece6e0c2c}{on\+Exit}} (Q\+Event $\ast$\mbox{\hyperlink{class_next_play_state_a7783af1735f1520169583dd192fe55e5}{event}}) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file Next\+Play\+State.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_next_play_state_ae82795ac9d6e1f783626404d9a878cb3}\label{class_next_play_state_ae82795ac9d6e1f783626404d9a878cb3}} 
+\index{NextPlayState@{NextPlayState}!NextPlayState@{NextPlayState}}
+\index{NextPlayState@{NextPlayState}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{NextPlayState()}{NextPlayState()}}
+{\footnotesize\ttfamily Next\+Play\+State\+::\+Next\+Play\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_play_ttt_application}{Play\+Ttt\+Application}} $\ast$}]{p\+Application }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Next\+Play\+State.\+cpp.
+
+\mbox{\Hypertarget{class_next_play_state_ab1e32d4b612a72a214aa4a5c19d805d3}\label{class_next_play_state_ab1e32d4b612a72a214aa4a5c19d805d3}} 
+\index{NextPlayState@{NextPlayState}!````~NextPlayState@{$\sim$NextPlayState}}
+\index{````~NextPlayState@{$\sim$NextPlayState}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{$\sim$NextPlayState()}{~NextPlayState()}}
+{\footnotesize\ttfamily Next\+Play\+State\+::$\sim$\+Next\+Play\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Next\+Play\+State.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_next_play_state_a771e5e810281af4ae54c05214d6f46c3}\label{class_next_play_state_a771e5e810281af4ae54c05214d6f46c3}} 
+\index{NextPlayState@{NextPlayState}!application@{application}}
+\index{application@{application}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{application()}{application()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_play_ttt_application}{Play\+Ttt\+Application}}$\ast$ Next\+Play\+State\+::application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file Next\+Play\+State.\+h.
+
+\mbox{\Hypertarget{class_next_play_state_a7783af1735f1520169583dd192fe55e5}\label{class_next_play_state_a7783af1735f1520169583dd192fe55e5}} 
+\index{NextPlayState@{NextPlayState}!event@{event}}
+\index{event@{event}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{event()}{event()}}
+{\footnotesize\ttfamily bool Next\+Play\+State\+::event (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 26 of file Next\+Play\+State.\+cpp.
+
+\mbox{\Hypertarget{class_next_play_state_a2364d676a67658209f5864f2b812d41a}\label{class_next_play_state_a2364d676a67658209f5864f2b812d41a}} 
+\index{NextPlayState@{NextPlayState}!exit@{exit}}
+\index{exit@{exit}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{exit}{exit}}
+{\footnotesize\ttfamily void Next\+Play\+State\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_next_play_state_a2a062d51b8d67db08c232ac385d5584c}\label{class_next_play_state_a2a062d51b8d67db08c232ac385d5584c}} 
+\index{NextPlayState@{NextPlayState}!homePlays@{homePlays}}
+\index{homePlays@{homePlays}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{homePlays}{homePlays}}
+{\footnotesize\ttfamily void Next\+Play\+State\+::home\+Plays (\begin{DoxyParamCaption}\item[{const Q\+Char \&}]{a\+Char }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_next_play_state_a7d52d13e1e42a6a6d4bd6c24a4b79df8}\label{class_next_play_state_a7d52d13e1e42a6a6d4bd6c24a4b79df8}} 
+\index{NextPlayState@{NextPlayState}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void Next\+Play\+State\+::on\+Entry (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 43 of file Next\+Play\+State.\+cpp.
+
+\mbox{\Hypertarget{class_next_play_state_ad68c72a04e950f9bac1ab4cece6e0c2c}\label{class_next_play_state_ad68c72a04e950f9bac1ab4cece6e0c2c}} 
+\index{NextPlayState@{NextPlayState}!onExit@{onExit}}
+\index{onExit@{onExit}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void Next\+Play\+State\+::on\+Exit (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 49 of file Next\+Play\+State.\+cpp.
+
+\mbox{\Hypertarget{class_next_play_state_a50fc09210fbfd57c3e599b9d41054f59}\label{class_next_play_state_a50fc09210fbfd57c3e599b9d41054f59}} 
+\index{NextPlayState@{NextPlayState}!setTimoutMsec@{setTimoutMsec}}
+\index{setTimoutMsec@{setTimoutMsec}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{setTimoutMsec()}{setTimoutMsec()}}
+{\footnotesize\ttfamily void Next\+Play\+State\+::set\+Timout\+Msec (\begin{DoxyParamCaption}\item[{const quint64}]{a\+Msec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file Next\+Play\+State.\+h.
+
+\mbox{\Hypertarget{class_next_play_state_a186e4eadf1f08174cc6d24851e709e66}\label{class_next_play_state_a186e4eadf1f08174cc6d24851e709e66}} 
+\index{NextPlayState@{NextPlayState}!visitorPlays@{visitorPlays}}
+\index{visitorPlays@{visitorPlays}!NextPlayState@{NextPlayState}}
+\doxysubsubsection{\texorpdfstring{visitorPlays}{visitorPlays}}
+{\footnotesize\ttfamily void Next\+Play\+State\+::visitor\+Plays (\begin{DoxyParamCaption}\item[{const Q\+Char \&}]{a\+Char }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_next_play_state_8h}{Next\+Play\+State.\+h}}\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_next_play_state_8cpp}{Next\+Play\+State.\+cpp}}\end{DoxyCompactItemize}

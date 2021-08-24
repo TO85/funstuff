@@ -1,0 +1,236 @@
+\hypertarget{class_icon_factory}{}\doxysection{Icon\+Factory Class Reference}
+\label{class_icon_factory}\index{IconFactory@{IconFactory}}
+
+
+{\ttfamily \#include $<$del-\/\+Icon\+Factory.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350}{Shape}} \{ \mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350aead1d0ebf9e55ac5214f9f03d4e6581c}{Empty}} = 0, 
+\mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350a033c65a7b5995e72ba2a046c840c4ccf}{Cross}}, 
+\mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350a8158435b1134c132b000e3b7b7fad837}{Circle}}, 
+\mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350af9110cb7fd486cfc92e89fe33ea19b14}{\$maximum}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_icon_factory_a3cb031319ee1248c5a0cfa98d6816304}{Icon\+Factory}} ()=default
+\item 
+\mbox{\hyperlink{class_icon_factory_aff6a67bf16d34cd274331f71c86b970a}{Icon\+Factory}} (const \mbox{\hyperlink{class_icon_factory}{Icon\+Factory}} \&other)=default
+\item 
+\mbox{\hyperlink{class_icon_factory_a88f9a2edb12a3d24772594560639b52c}{$\sim$\+Icon\+Factory}} ()=default
+\item 
+\mbox{\hyperlink{class_icon_factory}{Icon\+Factory}} \& \mbox{\hyperlink{class_icon_factory_a802a06b6b5485020a34d69ae100f44ce}{operator=}} (const \mbox{\hyperlink{class_icon_factory}{Icon\+Factory}} \&other)=default
+\item 
+Q\+Icon \mbox{\hyperlink{class_icon_factory_a1b6897815d9b57d6d70f56de81cb6300}{icon}} (const Q\+String \&a\+Key) const
+\item 
+Q\+Icon \mbox{\hyperlink{class_icon_factory_a14f4a0efe76115421043f6b797f7a772}{icon}} (const Q\+String\+List \&a\+Keys) const
+\item 
+Q\+Pixmap \mbox{\hyperlink{class_icon_factory_a48a2c030e37bbe4867513dc455155f40}{pixmap}} (const Q\+String \&a\+Key, const Q\+Size a\+Size=Q\+Size(), Q\+Icon\+::\+Mode mode=Q\+Icon\+::\+Normal, Q\+Icon\+::\+State state=Q\+Icon\+::\+Off) const
+\item 
+Q\+Pixmap \mbox{\hyperlink{class_icon_factory_ab0f4dea6dfb21917e6f5d930df70e128}{solid\+Pixmap}} (const Q\+Color \&a\+Color, const Q\+Size a\+Size=Q\+Size()) const
+\item 
+void \mbox{\hyperlink{class_icon_factory_a804cbecc9000fe8c2653bea1a02157fe}{create}} (const Q\+String \&a\+Key, const \mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350}{Shape}} a\+Shape, const Q\+Color a\+Color, const Q\+Size a\+Size=Q\+Size(), const Q\+Icon\+::\+Mode mode=Q\+Icon\+::\+Normal, const Q\+Icon\+::\+State state=Q\+Icon\+::\+Off)
+\item 
+void \mbox{\hyperlink{class_icon_factory_a63f7b779d9ea5a936f0477ba04f2e25d}{create}} (const Q\+String \&a\+Key, const Q\+Color a\+Color, const Q\+Size a\+Size=Q\+Size(), const Q\+Icon\+::\+Mode mode=Q\+Icon\+::\+Normal, const Q\+Icon\+::\+State state=Q\+Icon\+::\+Off)
+\item 
+void \mbox{\hyperlink{class_icon_factory_a906307af424345928610fc9c424a1bf8}{set\+Size}} (const Q\+Size a\+Size)
+\item 
+void \mbox{\hyperlink{class_icon_factory_ac3a6e7d5f5c08a24df3368f8df1e926e}{add\+Icon\+File}} (const Q\+String \&a\+Key, const Q\+File\+Info \&a\+File\+Info, const Q\+Icon\+::\+Mode mode=Q\+Icon\+::\+Normal, const Q\+Icon\+::\+State state=Q\+Icon\+::\+Off)
+\item 
+void \mbox{\hyperlink{class_icon_factory_a00f67460ac48afd5325d2925d7749c67}{add\+Pixmap}} (const Q\+String \&a\+Key, const Q\+Pixmap \&a\+Pixmap, const Q\+Icon\+::\+Mode mode=Q\+Icon\+::\+Normal, const Q\+Icon\+::\+State state=Q\+Icon\+::\+Off)
+\item 
+void \mbox{\hyperlink{class_icon_factory_a6b7167c9713b1a8f3c2d86ab416dca39}{add\+Picture}} (const Q\+String \&a\+Key, const Q\+Picture \&a\+Picture, const Q\+Icon\+::\+Mode mode=Q\+Icon\+::\+Normal, const Q\+Icon\+::\+State state=Q\+Icon\+::\+Off)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file del-\/\+Icon\+Factory.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_icon_factory_a5d6911b08db1e37243b61b455f86b350}\label{class_icon_factory_a5d6911b08db1e37243b61b455f86b350}} 
+\index{IconFactory@{IconFactory}!Shape@{Shape}}
+\index{Shape@{Shape}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{Shape}{Shape}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350}{Icon\+Factory\+::\+Shape}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Empty@{Empty}!IconFactory@{IconFactory}}\index{IconFactory@{IconFactory}!Empty@{Empty}}}\mbox{\Hypertarget{class_icon_factory_a5d6911b08db1e37243b61b455f86b350aead1d0ebf9e55ac5214f9f03d4e6581c}\label{class_icon_factory_a5d6911b08db1e37243b61b455f86b350aead1d0ebf9e55ac5214f9f03d4e6581c}} 
+Empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cross@{Cross}!IconFactory@{IconFactory}}\index{IconFactory@{IconFactory}!Cross@{Cross}}}\mbox{\Hypertarget{class_icon_factory_a5d6911b08db1e37243b61b455f86b350a033c65a7b5995e72ba2a046c840c4ccf}\label{class_icon_factory_a5d6911b08db1e37243b61b455f86b350a033c65a7b5995e72ba2a046c840c4ccf}} 
+Cross&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Circle@{Circle}!IconFactory@{IconFactory}}\index{IconFactory@{IconFactory}!Circle@{Circle}}}\mbox{\Hypertarget{class_icon_factory_a5d6911b08db1e37243b61b455f86b350a8158435b1134c132b000e3b7b7fad837}\label{class_icon_factory_a5d6911b08db1e37243b61b455f86b350a8158435b1134c132b000e3b7b7fad837}} 
+Circle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\$maximum@{\$maximum}!IconFactory@{IconFactory}}\index{IconFactory@{IconFactory}!\$maximum@{\$maximum}}}\mbox{\Hypertarget{class_icon_factory_a5d6911b08db1e37243b61b455f86b350af9110cb7fd486cfc92e89fe33ea19b14}\label{class_icon_factory_a5d6911b08db1e37243b61b455f86b350af9110cb7fd486cfc92e89fe33ea19b14}} 
+\$maximum&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 15 of file del-\/\+Icon\+Factory.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_icon_factory_a3cb031319ee1248c5a0cfa98d6816304}\label{class_icon_factory_a3cb031319ee1248c5a0cfa98d6816304}} 
+\index{IconFactory@{IconFactory}!IconFactory@{IconFactory}}
+\index{IconFactory@{IconFactory}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{IconFactory()}{IconFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Icon\+Factory\+::\+Icon\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_icon_factory_aff6a67bf16d34cd274331f71c86b970a}\label{class_icon_factory_aff6a67bf16d34cd274331f71c86b970a}} 
+\index{IconFactory@{IconFactory}!IconFactory@{IconFactory}}
+\index{IconFactory@{IconFactory}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{IconFactory()}{IconFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Icon\+Factory\+::\+Icon\+Factory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_icon_factory}{Icon\+Factory}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_icon_factory_a88f9a2edb12a3d24772594560639b52c}\label{class_icon_factory_a88f9a2edb12a3d24772594560639b52c}} 
+\index{IconFactory@{IconFactory}!````~IconFactory@{$\sim$IconFactory}}
+\index{````~IconFactory@{$\sim$IconFactory}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$IconFactory()}{~IconFactory()}}
+{\footnotesize\ttfamily Icon\+Factory\+::$\sim$\+Icon\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_icon_factory_ac3a6e7d5f5c08a24df3368f8df1e926e}\label{class_icon_factory_ac3a6e7d5f5c08a24df3368f8df1e926e}} 
+\index{IconFactory@{IconFactory}!addIconFile@{addIconFile}}
+\index{addIconFile@{addIconFile}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{addIconFile()}{addIconFile()}}
+{\footnotesize\ttfamily void Icon\+Factory\+::add\+Icon\+File (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key,  }\item[{const Q\+File\+Info \&}]{a\+File\+Info,  }\item[{const Q\+Icon\+::\+Mode}]{mode = {\ttfamily QIcon\+:\+:Normal},  }\item[{const Q\+Icon\+::\+State}]{state = {\ttfamily QIcon\+:\+:Off} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_icon_factory_a6b7167c9713b1a8f3c2d86ab416dca39}\label{class_icon_factory_a6b7167c9713b1a8f3c2d86ab416dca39}} 
+\index{IconFactory@{IconFactory}!addPicture@{addPicture}}
+\index{addPicture@{addPicture}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{addPicture()}{addPicture()}}
+{\footnotesize\ttfamily void Icon\+Factory\+::add\+Picture (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key,  }\item[{const Q\+Picture \&}]{a\+Picture,  }\item[{const Q\+Icon\+::\+Mode}]{mode = {\ttfamily QIcon\+:\+:Normal},  }\item[{const Q\+Icon\+::\+State}]{state = {\ttfamily QIcon\+:\+:Off} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_icon_factory_a00f67460ac48afd5325d2925d7749c67}\label{class_icon_factory_a00f67460ac48afd5325d2925d7749c67}} 
+\index{IconFactory@{IconFactory}!addPixmap@{addPixmap}}
+\index{addPixmap@{addPixmap}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{addPixmap()}{addPixmap()}}
+{\footnotesize\ttfamily void Icon\+Factory\+::add\+Pixmap (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key,  }\item[{const Q\+Pixmap \&}]{a\+Pixmap,  }\item[{const Q\+Icon\+::\+Mode}]{mode = {\ttfamily QIcon\+:\+:Normal},  }\item[{const Q\+Icon\+::\+State}]{state = {\ttfamily QIcon\+:\+:Off} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file del-\/\+Icon\+Factory.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_icon_factory_a00f67460ac48afd5325d2925d7749c67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_icon_factory_a63f7b779d9ea5a936f0477ba04f2e25d}\label{class_icon_factory_a63f7b779d9ea5a936f0477ba04f2e25d}} 
+\index{IconFactory@{IconFactory}!create@{create}}
+\index{create@{create}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Icon\+Factory\+::create (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key,  }\item[{const Q\+Color}]{a\+Color,  }\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()},  }\item[{const Q\+Icon\+::\+Mode}]{mode = {\ttfamily QIcon\+:\+:Normal},  }\item[{const Q\+Icon\+::\+State}]{state = {\ttfamily QIcon\+:\+:Off} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_icon_factory_a804cbecc9000fe8c2653bea1a02157fe}\label{class_icon_factory_a804cbecc9000fe8c2653bea1a02157fe}} 
+\index{IconFactory@{IconFactory}!create@{create}}
+\index{create@{create}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Icon\+Factory\+::create (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key,  }\item[{const \mbox{\hyperlink{class_icon_factory_a5d6911b08db1e37243b61b455f86b350}{Shape}}}]{a\+Shape,  }\item[{const Q\+Color}]{a\+Color,  }\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()},  }\item[{const Q\+Icon\+::\+Mode}]{mode = {\ttfamily QIcon\+:\+:Normal},  }\item[{const Q\+Icon\+::\+State}]{state = {\ttfamily QIcon\+:\+:Off} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file del-\/\+Icon\+Factory.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_icon_factory_a804cbecc9000fe8c2653bea1a02157fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_icon_factory_a1b6897815d9b57d6d70f56de81cb6300}\label{class_icon_factory_a1b6897815d9b57d6d70f56de81cb6300}} 
+\index{IconFactory@{IconFactory}!icon@{icon}}
+\index{icon@{icon}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{icon()}{icon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Q\+Icon Icon\+Factory\+::icon (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 5 of file del-\/\+Icon\+Factory.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_icon_factory_a1b6897815d9b57d6d70f56de81cb6300_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_icon_factory_a14f4a0efe76115421043f6b797f7a772}\label{class_icon_factory_a14f4a0efe76115421043f6b797f7a772}} 
+\index{IconFactory@{IconFactory}!icon@{icon}}
+\index{icon@{icon}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{icon()}{icon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Q\+Icon Icon\+Factory\+::icon (\begin{DoxyParamCaption}\item[{const Q\+String\+List \&}]{a\+Keys }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_icon_factory_a802a06b6b5485020a34d69ae100f44ce}\label{class_icon_factory_a802a06b6b5485020a34d69ae100f44ce}} 
+\index{IconFactory@{IconFactory}!operator=@{operator=}}
+\index{operator=@{operator=}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_icon_factory}{Icon\+Factory}}\& Icon\+Factory\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_icon_factory}{Icon\+Factory}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_icon_factory_a48a2c030e37bbe4867513dc455155f40}\label{class_icon_factory_a48a2c030e37bbe4867513dc455155f40}} 
+\index{IconFactory@{IconFactory}!pixmap@{pixmap}}
+\index{pixmap@{pixmap}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{pixmap()}{pixmap()}}
+{\footnotesize\ttfamily Q\+Pixmap Icon\+Factory\+::pixmap (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Key,  }\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()},  }\item[{Q\+Icon\+::\+Mode}]{mode = {\ttfamily QIcon\+:\+:Normal},  }\item[{Q\+Icon\+::\+State}]{state = {\ttfamily QIcon\+:\+:Off} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 10 of file del-\/\+Icon\+Factory.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_icon_factory_a48a2c030e37bbe4867513dc455155f40_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_icon_factory_a906307af424345928610fc9c424a1bf8}\label{class_icon_factory_a906307af424345928610fc9c424a1bf8}} 
+\index{IconFactory@{IconFactory}!setSize@{setSize}}
+\index{setSize@{setSize}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void Icon\+Factory\+::set\+Size (\begin{DoxyParamCaption}\item[{const Q\+Size}]{a\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 45 of file del-\/\+Icon\+Factory.\+h.
+
+\mbox{\Hypertarget{class_icon_factory_ab0f4dea6dfb21917e6f5d930df70e128}\label{class_icon_factory_ab0f4dea6dfb21917e6f5d930df70e128}} 
+\index{IconFactory@{IconFactory}!solidPixmap@{solidPixmap}}
+\index{solidPixmap@{solidPixmap}!IconFactory@{IconFactory}}
+\doxysubsubsection{\texorpdfstring{solidPixmap()}{solidPixmap()}}
+{\footnotesize\ttfamily Q\+Pixmap Icon\+Factory\+::solid\+Pixmap (\begin{DoxyParamCaption}\item[{const Q\+Color \&}]{a\+Color,  }\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 15 of file del-\/\+Icon\+Factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{del-_icon_factory_8h}{del-\/\+Icon\+Factory.\+h}}\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{del-_icon_factory_8cpp}{del-\/\+Icon\+Factory.\+cpp}}\end{DoxyCompactItemize}

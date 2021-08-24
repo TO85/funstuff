@@ -1,0 +1,241 @@
+\hypertarget{class_ttt_pixmaps}{}\doxysection{Ttt\+Pixmaps Class Reference}
+\label{class_ttt_pixmaps}\index{TttPixmaps@{TttPixmaps}}
+
+
+{\ttfamily \#include $<$Ttt\+Pixmaps.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}{Key}} \{ \newline
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba15af8c853bffec75ba7403bd304c274f}{\$null}} = 0, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bab9870832d9933108861ac46b8191e396}{Back\+Base}} = 0x00000001, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baf5f9d5b46eb56a89052bb71e6fc81661}{Empty\+Base}} = 0x00000002, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba332d71c971e888c25ed8e34f5c132f2f}{Clear\+Base}} = 0x00000004, 
+\newline
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba69458b752ec31f64b0de41eeba71c3e6}{\$\+Base\+Mask}} = 0x000000\+FF, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baeaab9ab0a61045b74ecb92d2bdf1b815}{Circle}} = 0x00000100, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baf44220453019a7fa6f64e8ddc328c377}{Cross}} = 0x00000200, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba83d218ca22dd809010b6772a67657847}{\$\+Shape\+Mask}} = 0x0000\+F\+F00, 
+\newline
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba9d3dc938e7798f0fae5869ac4423cda7}{Line\+NS}} = 0x00020000, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba3c2bb07460fc62f6bab90c4427ec8c33}{Line\+EW}} = 0x00040000, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bad181443a3a066a13b0960fa8a75dfb3c}{Line\+N\+W\+SE}} = 0x00080000, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bad70eb4d29f29facf8173584460702d55}{Line\+N\+E\+SW}} = 0x00100000, 
+\newline
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba641e6149977febe345de0e59c48e3025}{\$\+Line\+Mask}} = 0x00\+F\+F0000, 
+\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba1cea4df686784b5befbeb63d4f763e73}{\$maximum}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ttt_pixmaps_aa1bc5d8da0e990af517e3cc769ddd86a}{Q\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+A\+GS}} (Keys, \mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}{Key}})
+\item 
+\mbox{\hyperlink{class_ttt_pixmaps_a2fba844756260aace96fdd758ee13c04}{Ttt\+Pixmaps}} (const Q\+Size a\+Size=Q\+Size())
+\item 
+Q\+Pixmap \mbox{\hyperlink{class_ttt_pixmaps_a172b46ecf2ffeee06d8f7d703cad7f8d}{pixmap}} (const \mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}{Key}} a\+Key, const Q\+Size a\+Size=Q\+Size()) const
+\item 
+Q\+Pixmap \mbox{\hyperlink{class_ttt_pixmaps_a2f61388ba65410a5139df95f97b4cd28}{pixmap}} (const int a\+Key\+Stack, const Q\+Size a\+Size=Q\+Size()) const
+\item 
+void \mbox{\hyperlink{class_ttt_pixmaps_ac91f1f0e614a775043a5d9fe99c188c2}{setup}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_ttt_pixmaps_ab514dfa802fcebf6010839763608fd8c}{write\+Temp\+Pixmap}} (const Q\+String \&a\+Name, const int \&a\+Keys, const Q\+Pixmap \&a\+Pixmap)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Ttt\+Pixmaps.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}} 
+\index{TttPixmaps@{TttPixmaps}!Key@{Key}}
+\index{Key@{Key}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}{Ttt\+Pixmaps\+::\+Key}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\$null@{\$null}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!\$null@{\$null}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba15af8c853bffec75ba7403bd304c274f}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba15af8c853bffec75ba7403bd304c274f}} 
+\$null&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BackBase@{BackBase}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!BackBase@{BackBase}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bab9870832d9933108861ac46b8191e396}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bab9870832d9933108861ac46b8191e396}} 
+Back\+Base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EmptyBase@{EmptyBase}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!EmptyBase@{EmptyBase}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baf5f9d5b46eb56a89052bb71e6fc81661}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baf5f9d5b46eb56a89052bb71e6fc81661}} 
+Empty\+Base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ClearBase@{ClearBase}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!ClearBase@{ClearBase}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba332d71c971e888c25ed8e34f5c132f2f}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba332d71c971e888c25ed8e34f5c132f2f}} 
+Clear\+Base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\$BaseMask@{\$BaseMask}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!\$BaseMask@{\$BaseMask}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba69458b752ec31f64b0de41eeba71c3e6}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba69458b752ec31f64b0de41eeba71c3e6}} 
+\$\+Base\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Circle@{Circle}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!Circle@{Circle}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baeaab9ab0a61045b74ecb92d2bdf1b815}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baeaab9ab0a61045b74ecb92d2bdf1b815}} 
+Circle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cross@{Cross}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!Cross@{Cross}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baf44220453019a7fa6f64e8ddc328c377}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619baf44220453019a7fa6f64e8ddc328c377}} 
+Cross&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\$ShapeMask@{\$ShapeMask}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!\$ShapeMask@{\$ShapeMask}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba83d218ca22dd809010b6772a67657847}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba83d218ca22dd809010b6772a67657847}} 
+\$\+Shape\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LineNS@{LineNS}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!LineNS@{LineNS}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba9d3dc938e7798f0fae5869ac4423cda7}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba9d3dc938e7798f0fae5869ac4423cda7}} 
+Line\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LineEW@{LineEW}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!LineEW@{LineEW}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba3c2bb07460fc62f6bab90c4427ec8c33}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba3c2bb07460fc62f6bab90c4427ec8c33}} 
+Line\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LineNWSE@{LineNWSE}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!LineNWSE@{LineNWSE}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bad181443a3a066a13b0960fa8a75dfb3c}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bad181443a3a066a13b0960fa8a75dfb3c}} 
+Line\+N\+W\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LineNESW@{LineNESW}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!LineNESW@{LineNESW}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bad70eb4d29f29facf8173584460702d55}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619bad70eb4d29f29facf8173584460702d55}} 
+Line\+N\+E\+SW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\$LineMask@{\$LineMask}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!\$LineMask@{\$LineMask}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba641e6149977febe345de0e59c48e3025}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba641e6149977febe345de0e59c48e3025}} 
+\$\+Line\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\$maximum@{\$maximum}!TttPixmaps@{TttPixmaps}}\index{TttPixmaps@{TttPixmaps}!\$maximum@{\$maximum}}}\mbox{\Hypertarget{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba1cea4df686784b5befbeb63d4f763e73}\label{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619ba1cea4df686784b5befbeb63d4f763e73}} 
+\$maximum&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 12 of file Ttt\+Pixmaps.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ttt_pixmaps_a2fba844756260aace96fdd758ee13c04}\label{class_ttt_pixmaps_a2fba844756260aace96fdd758ee13c04}} 
+\index{TttPixmaps@{TttPixmaps}!TttPixmaps@{TttPixmaps}}
+\index{TttPixmaps@{TttPixmaps}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{TttPixmaps()}{TttPixmaps()}}
+{\footnotesize\ttfamily Ttt\+Pixmaps\+::\+Ttt\+Pixmaps (\begin{DoxyParamCaption}\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Ttt\+Pixmaps.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ttt_pixmaps_a2f61388ba65410a5139df95f97b4cd28}\label{class_ttt_pixmaps_a2f61388ba65410a5139df95f97b4cd28}} 
+\index{TttPixmaps@{TttPixmaps}!pixmap@{pixmap}}
+\index{pixmap@{pixmap}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{pixmap()}{pixmap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Q\+Pixmap Ttt\+Pixmaps\+::pixmap (\begin{DoxyParamCaption}\item[{const int}]{a\+Key\+Stack,  }\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 26 of file Ttt\+Pixmaps.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ttt_pixmaps_a2f61388ba65410a5139df95f97b4cd28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_ttt_pixmaps_a2f61388ba65410a5139df95f97b4cd28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ttt_pixmaps_a172b46ecf2ffeee06d8f7d703cad7f8d}\label{class_ttt_pixmaps_a172b46ecf2ffeee06d8f7d703cad7f8d}} 
+\index{TttPixmaps@{TttPixmaps}!pixmap@{pixmap}}
+\index{pixmap@{pixmap}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{pixmap()}{pixmap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Q\+Pixmap Ttt\+Pixmaps\+::pixmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}{Key}}}]{a\+Key,  }\item[{const Q\+Size}]{a\+Size = {\ttfamily QSize()} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 15 of file Ttt\+Pixmaps.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ttt_pixmaps_a172b46ecf2ffeee06d8f7d703cad7f8d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ttt_pixmaps_a172b46ecf2ffeee06d8f7d703cad7f8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ttt_pixmaps_aa1bc5d8da0e990af517e3cc769ddd86a}\label{class_ttt_pixmaps_aa1bc5d8da0e990af517e3cc769ddd86a}} 
+\index{TttPixmaps@{TttPixmaps}!Q\_DECLARE\_FLAGS@{Q\_DECLARE\_FLAGS}}
+\index{Q\_DECLARE\_FLAGS@{Q\_DECLARE\_FLAGS}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{Q\_DECLARE\_FLAGS()}{Q\_DECLARE\_FLAGS()}}
+{\footnotesize\ttfamily Ttt\+Pixmaps\+::\+Q\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+A\+GS (\begin{DoxyParamCaption}\item[{Keys}]{,  }\item[{\mbox{\hyperlink{class_ttt_pixmaps_ad9fd61f6fc376c4ad87ba21a0409619b}{Key}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ttt_pixmaps_ac91f1f0e614a775043a5d9fe99c188c2}\label{class_ttt_pixmaps_ac91f1f0e614a775043a5d9fe99c188c2}} 
+\index{TttPixmaps@{TttPixmaps}!setup@{setup}}
+\index{setup@{setup}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Ttt\+Pixmaps\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file Ttt\+Pixmaps.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ttt_pixmaps_ac91f1f0e614a775043a5d9fe99c188c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ttt_pixmaps_ab514dfa802fcebf6010839763608fd8c}\label{class_ttt_pixmaps_ab514dfa802fcebf6010839763608fd8c}} 
+\index{TttPixmaps@{TttPixmaps}!writeTempPixmap@{writeTempPixmap}}
+\index{writeTempPixmap@{writeTempPixmap}!TttPixmaps@{TttPixmaps}}
+\doxysubsubsection{\texorpdfstring{writeTempPixmap()}{writeTempPixmap()}}
+{\footnotesize\ttfamily bool Ttt\+Pixmaps\+::write\+Temp\+Pixmap (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{a\+Name,  }\item[{const int \&}]{a\+Keys,  }\item[{const Q\+Pixmap \&}]{a\+Pixmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 153 of file Ttt\+Pixmaps.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ttt_pixmaps_ab514dfa802fcebf6010839763608fd8c_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_ttt_pixmaps_8h}{Ttt\+Pixmaps.\+h}}\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_ttt_pixmaps_8cpp}{Ttt\+Pixmaps.\+cpp}}\end{DoxyCompactItemize}

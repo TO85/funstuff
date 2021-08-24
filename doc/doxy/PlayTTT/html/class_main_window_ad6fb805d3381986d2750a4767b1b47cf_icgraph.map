@@ -1,0 +1,6 @@
+<map id="MainWindow::board" name="MainWindow::board">
+<area shape="rect" id="node1" title=" " alt="" coords="391,42,541,69"/>
+<area shape="rect" id="node2" href="$class_play_ttt_application.html#ae8864bef00112ac4248fa189fb172db9" title=" " alt="" coords="198,5,339,47"/>
+<area shape="rect" id="node4" href="$class_score_widget.html#a461aadc6ae5c60d07fecaf296c82e3b2" title=" " alt="" coords="195,71,343,98"/>
+<area shape="rect" id="node3" href="$class_play_ttt_application.html#ae3ec6670ab6ce4e2797b1fcf79965761" title=" " alt="" coords="5,5,147,47"/>
+</map>

@@ -1,0 +1,290 @@
+\hypertarget{class_random}{}\doxysection{Random Class Reference}
+\label{class_random}\index{Random@{Random}}
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef quint32 \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}}
+\item 
+typedef double \mbox{\hyperlink{class_random_a966c358252195d733014871aac0b38ec}{Real}}
+\item 
+typedef qsizetype \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}}
+\item 
+typedef Q\+Vector$<$ \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} $>$ \mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}}
+\item 
+typedef Q\+Vector$<$ \mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}} $>$ \mbox{\hyperlink{class_random_a514d638d0a0a6f79205eb5b0c34ca89f}{Word\+Vector\+Vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_random_acb76b49c3903a3c4fb67fd216341f08d}{Random}} ()
+\item 
+\mbox{\hyperlink{class_random_aacce9530f4cc624d6ab2243db89cba88}{Random}} (const quint32 a\+Seed)
+\item 
+void \mbox{\hyperlink{class_random_a2a283fb48f68ee79cef91fceaf6eb9a9}{ctor}} ()
+\item 
+\mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}} \mbox{\hyperlink{class_random_ad64f4df95158f73a639210857db47c0f}{buffer\+Word\+Count}} () const
+\item 
+\mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} \mbox{\hyperlink{class_random_afa3579e5eb6df216254069cc63f0931d}{peek}} (const \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} a\+Bound)
+\item 
+\mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} \mbox{\hyperlink{class_random_ae7fc0f5247c247ca34c446d79f2fee21}{take}} (const \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} a\+Bound)
+\item 
+\mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} \mbox{\hyperlink{class_random_a4ca2eb60bd3e0621f378c8138a0aeb06}{peek\+Word}} ()
+\item 
+\mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} \mbox{\hyperlink{class_random_aa56f816b0dd23d6027467800285b97f7}{take\+Word}} ()
+\item 
+\mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}} \mbox{\hyperlink{class_random_a175e8e235493dbb0436f002761d3088e}{peek\+Words}} (const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}} a\+Word\+Count)
+\item 
+\mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}} \mbox{\hyperlink{class_random_af4510989b47b2df3420e8e79feaae2ab}{take\+Words}} (const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}} a\+Word\+Count)
+\item 
+bool \mbox{\hyperlink{class_random_aec91da5b5089d2778896fa3dfc61bde4}{peek\+Bit}} ()
+\item 
+bool \mbox{\hyperlink{class_random_a3cdc098e3efba0fff9bf27ecc5e99414}{take\+Bit}} ()
+\item 
+Q\+Bit\+Array \mbox{\hyperlink{class_random_a1fe652745a813561d02989c45c94e278}{peek\+Bits}} (const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}} a\+Bit\+Count)
+\item 
+Q\+Bit\+Array \mbox{\hyperlink{class_random_ae804710b1010d9ec39a1f61e55b24f10}{take\+Bits}} (const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}} a\+Bit\+Count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file Random.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_random_aea055e5232f89e3a6fd0e72a253f5fad}\label{class_random_aea055e5232f89e3a6fd0e72a253f5fad}} 
+\index{Random@{Random}!Count@{Count}}
+\index{Count@{Count}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily typedef qsizetype \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Random\+::\+Count}}}
+
+
+
+Definition at line 13 of file Random.\+h.
+
+\mbox{\Hypertarget{class_random_a966c358252195d733014871aac0b38ec}\label{class_random_a966c358252195d733014871aac0b38ec}} 
+\index{Random@{Random}!Real@{Real}}
+\index{Real@{Real}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{Real}{Real}}
+{\footnotesize\ttfamily typedef double \mbox{\hyperlink{class_random_a966c358252195d733014871aac0b38ec}{Random\+::\+Real}}}
+
+
+
+Definition at line 12 of file Random.\+h.
+
+\mbox{\Hypertarget{class_random_afa32f12c429b8b9fee583029415bd7ec}\label{class_random_afa32f12c429b8b9fee583029415bd7ec}} 
+\index{Random@{Random}!Word@{Word}}
+\index{Word@{Word}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{Word}{Word}}
+{\footnotesize\ttfamily typedef quint32 \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Random\+::\+Word}}}
+
+
+
+Definition at line 11 of file Random.\+h.
+
+\mbox{\Hypertarget{class_random_aa25106321f4576bba5d9e9a7485f27fe}\label{class_random_aa25106321f4576bba5d9e9a7485f27fe}} 
+\index{Random@{Random}!WordVector@{WordVector}}
+\index{WordVector@{WordVector}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{WordVector}{WordVector}}
+{\footnotesize\ttfamily typedef Q\+Vector$<$\mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}}$>$ \mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Random\+::\+Word\+Vector}}}
+
+
+
+Definition at line 14 of file Random.\+h.
+
+\mbox{\Hypertarget{class_random_a514d638d0a0a6f79205eb5b0c34ca89f}\label{class_random_a514d638d0a0a6f79205eb5b0c34ca89f}} 
+\index{Random@{Random}!WordVectorVector@{WordVectorVector}}
+\index{WordVectorVector@{WordVectorVector}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{WordVectorVector}{WordVectorVector}}
+{\footnotesize\ttfamily typedef Q\+Vector$<$\mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}}$>$ \mbox{\hyperlink{class_random_a514d638d0a0a6f79205eb5b0c34ca89f}{Random\+::\+Word\+Vector\+Vector}}}
+
+
+
+Definition at line 15 of file Random.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_random_acb76b49c3903a3c4fb67fd216341f08d}\label{class_random_acb76b49c3903a3c4fb67fd216341f08d}} 
+\index{Random@{Random}!Random@{Random}}
+\index{Random@{Random}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Random\+::\+Random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file Random.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_random_acb76b49c3903a3c4fb67fd216341f08d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_random_aacce9530f4cc624d6ab2243db89cba88}\label{class_random_aacce9530f4cc624d6ab2243db89cba88}} 
+\index{Random@{Random}!Random@{Random}}
+\index{Random@{Random}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Random\+::\+Random (\begin{DoxyParamCaption}\item[{const quint32}]{a\+Seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 19 of file Random.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_random_aacce9530f4cc624d6ab2243db89cba88_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_random_ad64f4df95158f73a639210857db47c0f}\label{class_random_ad64f4df95158f73a639210857db47c0f}} 
+\index{Random@{Random}!bufferWordCount@{bufferWordCount}}
+\index{bufferWordCount@{bufferWordCount}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{bufferWordCount()}{bufferWordCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}} Random\+::buffer\+Word\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file Random.\+h.
+
+\mbox{\Hypertarget{class_random_a2a283fb48f68ee79cef91fceaf6eb9a9}\label{class_random_a2a283fb48f68ee79cef91fceaf6eb9a9}} 
+\index{Random@{Random}!ctor@{ctor}}
+\index{ctor@{ctor}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{ctor()}{ctor()}}
+{\footnotesize\ttfamily void Random\+::ctor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Random.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_random_a2a283fb48f68ee79cef91fceaf6eb9a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_random_a2a283fb48f68ee79cef91fceaf6eb9a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_random_afa3579e5eb6df216254069cc63f0931d}\label{class_random_afa3579e5eb6df216254069cc63f0931d}} 
+\index{Random@{Random}!peek@{peek}}
+\index{peek@{peek}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} Random\+::peek (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}}}]{a\+Bound }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_random_aec91da5b5089d2778896fa3dfc61bde4}\label{class_random_aec91da5b5089d2778896fa3dfc61bde4}} 
+\index{Random@{Random}!peekBit@{peekBit}}
+\index{peekBit@{peekBit}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{peekBit()}{peekBit()}}
+{\footnotesize\ttfamily bool Random\+::peek\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_random_a1fe652745a813561d02989c45c94e278}\label{class_random_a1fe652745a813561d02989c45c94e278}} 
+\index{Random@{Random}!peekBits@{peekBits}}
+\index{peekBits@{peekBits}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{peekBits()}{peekBits()}}
+{\footnotesize\ttfamily Q\+Bit\+Array Random\+::peek\+Bits (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}}}]{a\+Bit\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_random_a4ca2eb60bd3e0621f378c8138a0aeb06}\label{class_random_a4ca2eb60bd3e0621f378c8138a0aeb06}} 
+\index{Random@{Random}!peekWord@{peekWord}}
+\index{peekWord@{peekWord}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{peekWord()}{peekWord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Random\+::\+Word}} Random\+::peek\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Random.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_random_a4ca2eb60bd3e0621f378c8138a0aeb06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_random_a175e8e235493dbb0436f002761d3088e}\label{class_random_a175e8e235493dbb0436f002761d3088e}} 
+\index{Random@{Random}!peekWords@{peekWords}}
+\index{peekWords@{peekWords}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{peekWords()}{peekWords()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}} Random\+::peek\+Words (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}}}]{a\+Word\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_random_ae7fc0f5247c247ca34c446d79f2fee21}\label{class_random_ae7fc0f5247c247ca34c446d79f2fee21}} 
+\index{Random@{Random}!take@{take}}
+\index{take@{take}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{take()}{take()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}} Random\+::take (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Word}}}]{a\+Bound }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_random_a3cdc098e3efba0fff9bf27ecc5e99414}\label{class_random_a3cdc098e3efba0fff9bf27ecc5e99414}} 
+\index{Random@{Random}!takeBit@{takeBit}}
+\index{takeBit@{takeBit}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{takeBit()}{takeBit()}}
+{\footnotesize\ttfamily bool Random\+::take\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Random.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_random_a3cdc098e3efba0fff9bf27ecc5e99414_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_random_ae804710b1010d9ec39a1f61e55b24f10}\label{class_random_ae804710b1010d9ec39a1f61e55b24f10}} 
+\index{Random@{Random}!takeBits@{takeBits}}
+\index{takeBits@{takeBits}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{takeBits()}{takeBits()}}
+{\footnotesize\ttfamily Q\+Bit\+Array Random\+::take\+Bits (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}}}]{a\+Bit\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_random_aa56f816b0dd23d6027467800285b97f7}\label{class_random_aa56f816b0dd23d6027467800285b97f7}} 
+\index{Random@{Random}!takeWord@{takeWord}}
+\index{takeWord@{takeWord}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{takeWord()}{takeWord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_afa32f12c429b8b9fee583029415bd7ec}{Random\+::\+Word}} Random\+::take\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Random.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_random_aa56f816b0dd23d6027467800285b97f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_random_af4510989b47b2df3420e8e79feaae2ab}\label{class_random_af4510989b47b2df3420e8e79feaae2ab}} 
+\index{Random@{Random}!takeWords@{takeWords}}
+\index{takeWords@{takeWords}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{takeWords()}{takeWords()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random_aa25106321f4576bba5d9e9a7485f27fe}{Word\+Vector}} Random\+::take\+Words (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random_aea055e5232f89e3a6fd0e72a253f5fad}{Count}}}]{a\+Word\+Count }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_random_8h}{Random.\+h}}\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_random_8cpp}{Random.\+cpp}}\end{DoxyCompactItemize}

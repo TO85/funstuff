@@ -1,0 +1,456 @@
+\hypertarget{class_play_ttt_application}{}\doxysection{Play\+Ttt\+Application Class Reference}
+\label{class_play_ttt_application}\index{PlayTttApplication@{PlayTttApplication}}
+
+
+{\ttfamily \#include $<$Play\+Ttt\+Application.\+h$>$}
+
+
+
+Inheritance diagram for Play\+Ttt\+Application\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{class_play_ttt_application__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Play\+Ttt\+Application\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{class_play_ttt_application__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Q\+Char \mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}}
+\item 
+typedef Q\+Vector$<$ \mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}} $>$ \mbox{\hyperlink{class_play_ttt_application_aaf1ffe7651a936ef182920e5919bea7c}{Token\+Vector}}
+\item 
+typedef Q\+Vector$<$ int $>$ \mbox{\hyperlink{class_play_ttt_application_a6b9ea0211b000f8bf167044374823769}{Index\+Vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a10e7e00d6e31d59761ea90e1054c667b}{start}} (\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$p\+Main\+Window)
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a10dd7520b702450891520fcfc00d72fd}{start\+Machine}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a1533c3fe11eb0ac834bbb35b9e598394}{start\+Play}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a5ce14c5f48e7872c7cbe63a261d235c1}{window\+Finished}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a1dfad49efe0f0243141bc6900146111b}{signal\+Construct}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a70337b0280b1875028dfead9d422042b}{signal\+Setup}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a3f01aecdb90a67e28907eb9e69fee0f2}{signal\+Start\+Play}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_ab001faea88a74e8c366703b1b09663bf}{signal\+Start\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a24925e453f30a3be38bef95723afd237}{signal\+Next\+Play\+Home}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a9e4eec675b68663e19e7442122c208b0}{signal\+Next\+Play\+Visitor}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a0a831b1bfea3693f53d8142b6b06b0e5}{signal\+Next\+Play\+Exit}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a2b62ea2b0ee3d19efcbc8d26ef474e3f}{signal\+Home\+Plays}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a2832085bb9ac4f31379ccd3d099a2ee4}{signal\+Visitor\+Plays}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a45e050ecb43b20785348b1fb10bd1307}{signal\+Show\+Play}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_af1a34894f5cde00d4a8bf0f12151b5c1}{signal\+Is\+Winner}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a67172d48c25d05c18fddc8614c331085}{signal\+Update\+Score}} ()
+\item 
+void \mbox{\hyperlink{class_play_ttt_application_a83a92c5876225189b5357d8c405a2eb5}{signal\+Exit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_play_ttt_application_ae13a57515107e168455e19f10f0d573e}{Play\+Ttt\+Application}} (int \&argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$ \mbox{\hyperlink{class_play_ttt_application_a3748c4d6a98d91fa99816bd4525bac35}{main\+Window}} ()
+\item 
+\mbox{\hyperlink{class_ttt_machine}{Ttt\+Machine}} $\ast$ \mbox{\hyperlink{class_play_ttt_application_adb9d0ed81a570116f0eaee259409f32c}{machine}} ()
+\item 
+\mbox{\hyperlink{class_ttt_board_widget}{Ttt\+Board\+Widget}} $\ast$ \mbox{\hyperlink{class_play_ttt_application_ae8864bef00112ac4248fa189fb172db9}{board}} ()
+\item 
+\mbox{\hyperlink{class_random}{Random}} \mbox{\hyperlink{class_play_ttt_application_ac5804a21cc0ed439db77357a2af03a14}{random}} ()
+\item 
+\mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}} \mbox{\hyperlink{class_play_ttt_application_a75d052e90fd5b03a5c8e6bd3040350fd}{cross\+Token}} () const
+\item 
+\mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}} \mbox{\hyperlink{class_play_ttt_application_a7d08aae7f9dd2877549f65ad9875c95e}{circle\+Token}} () const
+\item 
+bool \mbox{\hyperlink{class_play_ttt_application_ad20ac96f01e96e17fd3a95c6b304149e}{is\+Home\+Current\+Player}} ()
+\item 
+bool \mbox{\hyperlink{class_play_ttt_application_aca32e56a481fb863ed334f65f451275f}{is\+Vistor\+Current\+Player}} ()
+\item 
+\mbox{\hyperlink{class_play_ttt_application_a6b9ea0211b000f8bf167044374823769}{Index\+Vector}} \mbox{\hyperlink{class_play_ttt_application_ae3ec6670ab6ce4e2797b1fcf79965761}{available\+Indicies}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file Play\+Ttt\+Application.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_play_ttt_application_a6b9ea0211b000f8bf167044374823769}\label{class_play_ttt_application_a6b9ea0211b000f8bf167044374823769}} 
+\index{PlayTttApplication@{PlayTttApplication}!IndexVector@{IndexVector}}
+\index{IndexVector@{IndexVector}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{IndexVector}{IndexVector}}
+{\footnotesize\ttfamily typedef Q\+Vector$<$int$>$ \mbox{\hyperlink{class_play_ttt_application_a6b9ea0211b000f8bf167044374823769}{Play\+Ttt\+Application\+::\+Index\+Vector}}}
+
+
+
+Definition at line 19 of file Play\+Ttt\+Application.\+h.
+
+\mbox{\Hypertarget{class_play_ttt_application_a658bc464e36e4504996fbae122319125}\label{class_play_ttt_application_a658bc464e36e4504996fbae122319125}} 
+\index{PlayTttApplication@{PlayTttApplication}!Token@{Token}}
+\index{Token@{Token}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{Token}{Token}}
+{\footnotesize\ttfamily typedef Q\+Char \mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Play\+Ttt\+Application\+::\+Token}}}
+
+
+
+Definition at line 17 of file Play\+Ttt\+Application.\+h.
+
+\mbox{\Hypertarget{class_play_ttt_application_aaf1ffe7651a936ef182920e5919bea7c}\label{class_play_ttt_application_aaf1ffe7651a936ef182920e5919bea7c}} 
+\index{PlayTttApplication@{PlayTttApplication}!TokenVector@{TokenVector}}
+\index{TokenVector@{TokenVector}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{TokenVector}{TokenVector}}
+{\footnotesize\ttfamily typedef Q\+Vector$<$\mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}}$>$ \mbox{\hyperlink{class_play_ttt_application_aaf1ffe7651a936ef182920e5919bea7c}{Play\+Ttt\+Application\+::\+Token\+Vector}}}
+
+
+
+Definition at line 18 of file Play\+Ttt\+Application.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_play_ttt_application_ae13a57515107e168455e19f10f0d573e}\label{class_play_ttt_application_ae13a57515107e168455e19f10f0d573e}} 
+\index{PlayTttApplication@{PlayTttApplication}!PlayTttApplication@{PlayTttApplication}}
+\index{PlayTttApplication@{PlayTttApplication}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{PlayTttApplication()}{PlayTttApplication()}}
+{\footnotesize\ttfamily Play\+Ttt\+Application\+::\+Play\+Ttt\+Application (\begin{DoxyParamCaption}\item[{int \&}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Play\+Ttt\+Application.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_play_ttt_application_ae3ec6670ab6ce4e2797b1fcf79965761}\label{class_play_ttt_application_ae3ec6670ab6ce4e2797b1fcf79965761}} 
+\index{PlayTttApplication@{PlayTttApplication}!availableIndicies@{availableIndicies}}
+\index{availableIndicies@{availableIndicies}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{availableIndicies()}{availableIndicies()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_play_ttt_application_a6b9ea0211b000f8bf167044374823769}{Play\+Ttt\+Application\+::\+Index\+Vector}} Play\+Ttt\+Application\+::available\+Indicies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file Play\+Ttt\+Application.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_ae3ec6670ab6ce4e2797b1fcf79965761_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_ae8864bef00112ac4248fa189fb172db9}\label{class_play_ttt_application_ae8864bef00112ac4248fa189fb172db9}} 
+\index{PlayTttApplication@{PlayTttApplication}!board@{board}}
+\index{board@{board}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{board()}{board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ttt_board_widget}{Ttt\+Board\+Widget}} $\ast$ Play\+Ttt\+Application\+::board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Play\+Ttt\+Application.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_play_ttt_application_ae8864bef00112ac4248fa189fb172db9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_play_ttt_application_ae8864bef00112ac4248fa189fb172db9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_a7d08aae7f9dd2877549f65ad9875c95e}\label{class_play_ttt_application_a7d08aae7f9dd2877549f65ad9875c95e}} 
+\index{PlayTttApplication@{PlayTttApplication}!circleToken@{circleToken}}
+\index{circleToken@{circleToken}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{circleToken()}{circleToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}} Play\+Ttt\+Application\+::circle\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file Play\+Ttt\+Application.\+h.
+
+\mbox{\Hypertarget{class_play_ttt_application_a75d052e90fd5b03a5c8e6bd3040350fd}\label{class_play_ttt_application_a75d052e90fd5b03a5c8e6bd3040350fd}} 
+\index{PlayTttApplication@{PlayTttApplication}!crossToken@{crossToken}}
+\index{crossToken@{crossToken}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{crossToken()}{crossToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_play_ttt_application_a658bc464e36e4504996fbae122319125}{Token}} Play\+Ttt\+Application\+::cross\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 29 of file Play\+Ttt\+Application.\+h.
+
+\mbox{\Hypertarget{class_play_ttt_application_ad20ac96f01e96e17fd3a95c6b304149e}\label{class_play_ttt_application_ad20ac96f01e96e17fd3a95c6b304149e}} 
+\index{PlayTttApplication@{PlayTttApplication}!isHomeCurrentPlayer@{isHomeCurrentPlayer}}
+\index{isHomeCurrentPlayer@{isHomeCurrentPlayer}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{isHomeCurrentPlayer()}{isHomeCurrentPlayer()}}
+{\footnotesize\ttfamily bool Play\+Ttt\+Application\+::is\+Home\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file Play\+Ttt\+Application.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_ad20ac96f01e96e17fd3a95c6b304149e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_aca32e56a481fb863ed334f65f451275f}\label{class_play_ttt_application_aca32e56a481fb863ed334f65f451275f}} 
+\index{PlayTttApplication@{PlayTttApplication}!isVistorCurrentPlayer@{isVistorCurrentPlayer}}
+\index{isVistorCurrentPlayer@{isVistorCurrentPlayer}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{isVistorCurrentPlayer()}{isVistorCurrentPlayer()}}
+{\footnotesize\ttfamily bool Play\+Ttt\+Application\+::is\+Vistor\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file Play\+Ttt\+Application.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_aca32e56a481fb863ed334f65f451275f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_adb9d0ed81a570116f0eaee259409f32c}\label{class_play_ttt_application_adb9d0ed81a570116f0eaee259409f32c}} 
+\index{PlayTttApplication@{PlayTttApplication}!machine@{machine}}
+\index{machine@{machine}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{machine()}{machine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ttt_machine}{Ttt\+Machine}}$\ast$ Play\+Ttt\+Application\+::machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 24 of file Play\+Ttt\+Application.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_adb9d0ed81a570116f0eaee259409f32c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_a3748c4d6a98d91fa99816bd4525bac35}\label{class_play_ttt_application_a3748c4d6a98d91fa99816bd4525bac35}} 
+\index{PlayTttApplication@{PlayTttApplication}!mainWindow@{mainWindow}}
+\index{mainWindow@{mainWindow}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{mainWindow()}{mainWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_main_window}{Main\+Window}}$\ast$ Play\+Ttt\+Application\+::main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file Play\+Ttt\+Application.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_a3748c4d6a98d91fa99816bd4525bac35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_ac5804a21cc0ed439db77357a2af03a14}\label{class_play_ttt_application_ac5804a21cc0ed439db77357a2af03a14}} 
+\index{PlayTttApplication@{PlayTttApplication}!random@{random}}
+\index{random@{random}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{random()}{random()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random}{Random}} Play\+Ttt\+Application\+::random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file Play\+Ttt\+Application.\+h.
+
+\mbox{\Hypertarget{class_play_ttt_application_a1dfad49efe0f0243141bc6900146111b}\label{class_play_ttt_application_a1dfad49efe0f0243141bc6900146111b}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalConstruct@{signalConstruct}}
+\index{signalConstruct@{signalConstruct}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalConstruct}{signalConstruct}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a83a92c5876225189b5357d8c405a2eb5}\label{class_play_ttt_application_a83a92c5876225189b5357d8c405a2eb5}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalExit@{signalExit}}
+\index{signalExit@{signalExit}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalExit}{signalExit}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a2b62ea2b0ee3d19efcbc8d26ef474e3f}\label{class_play_ttt_application_a2b62ea2b0ee3d19efcbc8d26ef474e3f}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalHomePlays@{signalHomePlays}}
+\index{signalHomePlays@{signalHomePlays}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalHomePlays}{signalHomePlays}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Home\+Plays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_af1a34894f5cde00d4a8bf0f12151b5c1}\label{class_play_ttt_application_af1a34894f5cde00d4a8bf0f12151b5c1}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalIsWinner@{signalIsWinner}}
+\index{signalIsWinner@{signalIsWinner}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalIsWinner}{signalIsWinner}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Is\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a0a831b1bfea3693f53d8142b6b06b0e5}\label{class_play_ttt_application_a0a831b1bfea3693f53d8142b6b06b0e5}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalNextPlayExit@{signalNextPlayExit}}
+\index{signalNextPlayExit@{signalNextPlayExit}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalNextPlayExit}{signalNextPlayExit}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Next\+Play\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a24925e453f30a3be38bef95723afd237}\label{class_play_ttt_application_a24925e453f30a3be38bef95723afd237}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalNextPlayHome@{signalNextPlayHome}}
+\index{signalNextPlayHome@{signalNextPlayHome}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalNextPlayHome}{signalNextPlayHome}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Next\+Play\+Home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a9e4eec675b68663e19e7442122c208b0}\label{class_play_ttt_application_a9e4eec675b68663e19e7442122c208b0}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalNextPlayVisitor@{signalNextPlayVisitor}}
+\index{signalNextPlayVisitor@{signalNextPlayVisitor}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalNextPlayVisitor}{signalNextPlayVisitor}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Next\+Play\+Visitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a70337b0280b1875028dfead9d422042b}\label{class_play_ttt_application_a70337b0280b1875028dfead9d422042b}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalSetup@{signalSetup}}
+\index{signalSetup@{signalSetup}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalSetup}{signalSetup}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a45e050ecb43b20785348b1fb10bd1307}\label{class_play_ttt_application_a45e050ecb43b20785348b1fb10bd1307}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalShowPlay@{signalShowPlay}}
+\index{signalShowPlay@{signalShowPlay}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalShowPlay}{signalShowPlay}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Show\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_ab001faea88a74e8c366703b1b09663bf}\label{class_play_ttt_application_ab001faea88a74e8c366703b1b09663bf}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalStartGame@{signalStartGame}}
+\index{signalStartGame@{signalStartGame}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalStartGame}{signalStartGame}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a3f01aecdb90a67e28907eb9e69fee0f2}\label{class_play_ttt_application_a3f01aecdb90a67e28907eb9e69fee0f2}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalStartPlay@{signalStartPlay}}
+\index{signalStartPlay@{signalStartPlay}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalStartPlay}{signalStartPlay}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Start\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a67172d48c25d05c18fddc8614c331085}\label{class_play_ttt_application_a67172d48c25d05c18fddc8614c331085}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalUpdateScore@{signalUpdateScore}}
+\index{signalUpdateScore@{signalUpdateScore}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalUpdateScore}{signalUpdateScore}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Update\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a2832085bb9ac4f31379ccd3d099a2ee4}\label{class_play_ttt_application_a2832085bb9ac4f31379ccd3d099a2ee4}} 
+\index{PlayTttApplication@{PlayTttApplication}!signalVisitorPlays@{signalVisitorPlays}}
+\index{signalVisitorPlays@{signalVisitorPlays}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{signalVisitorPlays}{signalVisitorPlays}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::signal\+Visitor\+Plays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_play_ttt_application_a10e7e00d6e31d59761ea90e1054c667b}\label{class_play_ttt_application_a10e7e00d6e31d59761ea90e1054c667b}} 
+\index{PlayTttApplication@{PlayTttApplication}!start@{start}}
+\index{start@{start}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$}]{p\+Main\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 34 of file Play\+Ttt\+Application.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_a10e7e00d6e31d59761ea90e1054c667b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{class_play_ttt_application_a10e7e00d6e31d59761ea90e1054c667b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_a10dd7520b702450891520fcfc00d72fd}\label{class_play_ttt_application_a10dd7520b702450891520fcfc00d72fd}} 
+\index{PlayTttApplication@{PlayTttApplication}!startMachine@{startMachine}}
+\index{startMachine@{startMachine}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{startMachine}{startMachine}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::start\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 41 of file Play\+Ttt\+Application.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_a10dd7520b702450891520fcfc00d72fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_play_ttt_application_a10dd7520b702450891520fcfc00d72fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_play_ttt_application_a1533c3fe11eb0ac834bbb35b9e598394}\label{class_play_ttt_application_a1533c3fe11eb0ac834bbb35b9e598394}} 
+\index{PlayTttApplication@{PlayTttApplication}!startPlay@{startPlay}}
+\index{startPlay@{startPlay}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{startPlay}{startPlay}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::start\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 49 of file Play\+Ttt\+Application.\+cpp.
+
+\mbox{\Hypertarget{class_play_ttt_application_a5ce14c5f48e7872c7cbe63a261d235c1}\label{class_play_ttt_application_a5ce14c5f48e7872c7cbe63a261d235c1}} 
+\index{PlayTttApplication@{PlayTttApplication}!windowFinished@{windowFinished}}
+\index{windowFinished@{windowFinished}!PlayTttApplication@{PlayTttApplication}}
+\doxysubsubsection{\texorpdfstring{windowFinished}{windowFinished}}
+{\footnotesize\ttfamily void Play\+Ttt\+Application\+::window\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 41 of file Play\+Ttt\+Application.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_play_ttt_application_8h}{Play\+Ttt\+Application.\+h}}\item 
+/home/dev/github/\+T\+O85/funstuff/src/apps/desktop/\+Play\+T\+T\+T/\mbox{\hyperlink{_play_ttt_application_8cpp}{Play\+Ttt\+Application.\+cpp}}\end{DoxyCompactItemize}
