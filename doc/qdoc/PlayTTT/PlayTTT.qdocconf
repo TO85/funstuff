@@ -1,0 +1,7 @@
+project = PlayTTT Documentation
+description = Demonstration Tic-Tac-Toe Game for Qt Desktop Application
+souredirs = ../../src/apps/desktop/PlayTTT
+sources.fileextensions = "*.cpp *.qdoc"
+outputdir = ./qdoc
+outputformats = WebXML
+

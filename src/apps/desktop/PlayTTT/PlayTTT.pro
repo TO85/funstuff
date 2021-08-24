@@ -16,7 +16,7 @@ SOURCES += \
     NextPlayState.cpp \
     PlayTttApplication.cpp \
     Random.cpp \
-    RandomF.cpp \
+    RandomExec.cpp \
     ScoreWidget.cpp \
     StartPlayState.cpp \
     TttBoardWidget.cpp \
@@ -32,7 +32,8 @@ HEADERS += \
     NextPlayState.h \
     PlayTttApplication.h \
     Random.h \
-    RandomF.h \
+    RandomExec.h \
+    RandomInterface.h \
     ScoreWidget.h \
     StartPlayState.h \
     TttBoardWidget.h \
