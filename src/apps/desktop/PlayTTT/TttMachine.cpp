@@ -80,6 +80,7 @@ QSignalTransition *TttMachine::newSignalTransition(QObject *pSender,
                                                    const char *pSignal,
                                                    const State aTarget)
 {
+    qDebug() << Q_FUNC_INFO << pSender->objectName() << aSource << pSignal << aTarget;
     QSignalTransition *result=nullptr;
     QState *pTarget = mStateMap[aTarget];
     result = new QSignalTransition(pSender, pSignal);

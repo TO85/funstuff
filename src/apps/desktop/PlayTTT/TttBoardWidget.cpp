@@ -123,14 +123,16 @@ int TttBoardWidget::gridEntries() const
 
 int TttBoardWidget::row(const int aIndex) const
 {
-    qDebug() << Q_FUNC_INFO;
-    return aIndex / mGridSize.width();
+    int result = aIndex / mGridSize.width();
+    qDebug() << Q_FUNC_INFO << aIndex << result;
+    return result;
 }
 
 int TttBoardWidget::col(const int aIndex) const
 {
-    qDebug() << Q_FUNC_INFO;
-    return aIndex % mGridSize.width();
+    int result = aIndex % mGridSize.width();
+    qDebug() << Q_FUNC_INFO << aIndex << result;
+    return result;
 }
 
 int TttBoardWidget::layoutRow(const int aIndex) const

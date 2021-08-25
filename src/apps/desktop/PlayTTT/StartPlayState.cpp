@@ -26,12 +26,14 @@ void StartPlayState::setup()
 
 void StartPlayState::onEntry(QEvent *event)
 {
+    qDebug() << Q_FUNC_INFO;
     Q_UNUSED(event);
     mainWindow()->actions()->setVisible("StartPlay");
 }
 
 void StartPlayState::onExit(QEvent *event)
 {
+    qDebug() << Q_FUNC_INFO;
     Q_UNUSED(event);
     mainWindow()->actions()->setInvisible("StartPlay");
 }
