@@ -2,6 +2,11 @@
 
 RandomExec::RandomExec() : cmpGenerator(new QRandomGenerator) {;}
 
+RandomExec::~RandomExec()
+{
+    if (cmpGenerator) delete cmpGenerator;
+}
+
 void RandomExec::seed(const quint32 aSeed)
 {
     cmpGenerator->seed(aSeed);

@@ -16,6 +16,7 @@ public:
 
 public:
     RandomExec();
+    ~RandomExec();
     void seed(const quint32 aSeed);
 
 private:
@@ -43,11 +44,11 @@ private:
     // RandomInterface interface
 public:
     bool peekBit() const;
+    QBitArray peekBits(const Count aBitCount) const { Q_ASSERT(!"TODO"); return QBitArray(); }
     Word peekWord() const;
     bool takeBit();
+    QBitArray takeBits(const Count aBitCount)  { Q_ASSERT(!"TODO"); return QBitArray(); }
     Word takeWord();
 
-    // RandomInterface interface
-public:
 };
 
