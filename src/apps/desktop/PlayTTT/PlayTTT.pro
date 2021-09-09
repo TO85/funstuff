@@ -13,6 +13,8 @@ LIBS -= -lGL
 SOURCES += \
     ActionManager.cpp \
     BottomWidget.cpp \
+    IconFactory.cpp \
+    IconGrid.cpp \
     NextPlayState.cpp \
     PlayTttApplication.cpp \
     Random.cpp \
@@ -28,6 +30,8 @@ SOURCES += \
 HEADERS += \
     ActionManager.h \
     BottomWidget.h \
+    IconFactory.h \
+    IconGrid.h \
     MainWindow.h \
     NextPlayState.h \
     PlayTttApplication.h \
