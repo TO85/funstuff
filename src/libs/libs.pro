@@ -1,4 +1,9 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    eirBase
+    fsCore \
+    fsGui \
+    fsUtil \
+    fsWidgets \
+
+
